@@ -1,5 +1,4 @@
 %---------- Inleiding ---------------------------------------------------------
-
 \section{Introductie}%
 \label{sec:introductie}
 
@@ -12,27 +11,40 @@ zoals het handmatig opzoeken van cliëntgegevens in openbare databases en het bi
 De onderzoeksvraag van mijn bachelorproef klinkt als volgt: "Hoe kunnen geautomatiseerde processen, in combinatie met een webinterface voor beheer, de administratieve
 last in advocatenkantoren verminderen en de efficiëntie bevorderen?"
 
-Het beoogde eindresultaat omvat niet alleen een werkend prototype van de geautomatiseerde toepassing en de bijbehorende webinterface,
+Het beoogde eindresultaat omvat niet alleen een werkend prototype van automatisatie en de bijbehorende webinterface,
 maar ook een grondig rapport met aanbevelingen voor implementatie in advocatenkantoren.
 
 Het succes van deze bachelorproef zal worden beoordeeld aan de hand van daadwerkelijke verbeteringen in efficiëntie en
 tijdsbesparing binnen het advocatenkantoor Deltalex.
 
 %---------- Stand van zaken ---------------------------------------------------
-
-\section{State-of-the-art}%
+\section{Literatuurstudie: automatisatie en de selectie van CMS systemen in de advocatuur}%
 \label{sec:state-of-the-art}
 
-Hier beschrijf je de \emph{state-of-the-art} rondom je gekozen onderzoeksdomein, d.w.z.\ een inleidende, doorlopende tekst over het onderzoeksdomein van je bachelorproef. Je steunt daarbij heel sterk op de professionele \emph{vakliteratuur}, en niet zozeer op populariserende teksten voor een breed publiek. Wat is de huidige stand van zaken in dit domein, en wat zijn nog eventuele open vragen (die misschien de aanleiding waren tot je onderzoeksvraag!)?
+Consider one real-world example: if your firm had 12,000 documents to review, and each one had 75 questions to answer, the task will take weeks to complete. Even with a sizable team working in concert, the sheer volume of work is daunting. One of those, “Where do I even start?” types of tasks others might shrink from.
+But what if you started by working the process, not just digging into the work? By automating even a part of a task that large, you stand to shave hours off the time involved.
+\autocite{ThomsonReuters2023}
 
-Je mag de titel van deze sectie ook aanpassen (literatuurstudie, stand van zaken, enz.). Zijn er al gelijkaardige onderzoeken gevoerd? Wat concluderen ze? Wat is het verschil met jouw onderzoek?
+Deze citatie illustreert dat investeren in een slimmere aanpak van je repetitieve taken zich zeker kan belonen. Dit is natuurlijk ook toepasbaar op een advocatenkantoor, volgende citatie illustreert het maken van documenten, waaronder dagvaardingen, invorderingen en mails.
 
-Verwijs bij elke introductie van een term of bewering over het domein naar de vakliteratuur, bijvoorbeeld~\autocite{Hykes2013}! Denk zeker goed na welke werken je refereert en waarom.
+Document creation, for example, requires a large amount of repetitive work. Diving right into the work may seem like the best way to get ahead, but by taking the time to define the fields in a document, and set up corresponding variables, it’s easy for a computer to automatically create custom, accurate documents on a scale that no human can match.
+\autocite{ThomsonReuters2023}
 
-Draag zorg voor correcte literatuurverwijzingen! Een bronvermelding hoort thuis \emph{binnen} de zin waar je je op die bron baseert, dus niet er buiten! Maak meteen een verwijzing als je gebruik maakt van een bron. Doe dit dus \emph{niet} aan het einde van een lange paragraaf. Baseer nooit teveel aansluitende tekst op eenzelfde bron.
+Automatisatie kan ook executie van taken zoals het optimaliseren van indienprocedures en legal research. \autocite{Aston2023}
 
-Als je informatie over bronnen verzamelt in JabRef, zorg er dan voor dat alle nodige info aanwezig is om de bron terug te vinden (zoals uitvoerig besproken in de lessen Research Methods).
+Het huidige landschap van administratieve\\ tools is heel groot. In het geval van Deltalex (en andere kantoren) hebben ze gekozen voor een bepaald softwarepakket. Dit is veelal een moeilijke keuze omdat er heel veel pakketten beschikbaar zijn en deze bieden elk hun voor- en nadelen. De selectie van een dergelijke tool kan een moeizaam proces zijn, maar kan gegoten worden in volgende stappen.
+\autocite{Clio2023}
 
+\begin{itemize}
+	\item \emph{Kies tussen cloud- of lokale opslag:} Waar hosten? 
+        \item \emph{Bekijk de kosten- en onderhoudsverschillen:} Varieert sterk op basis van stap 1.
+        \item \emph{Zorg voor toegang tot informatie op afstand:} Veel advocaten werken soms op afstand, bv. vanuit een rechtbank.
+        \item \emph{Controleer de compatibiliteit met bestaande software:}\\ Complexere pakketten worden meestal pas aangekocht als het kantoor zich verder bevindt dan de startfase. M.a.w. er is zeker al bestaande data op oudere systemen.
+        \item \emph{Evalueer gebruiksgemak en trainingsvereisten:} Het is belangrijk dat iedere gebruiker zo snel en probleemloos met de nieuwe software aan de slag kan.
+        \item \emph{Zorg voor ethische naleving en beveiliging:} Advocatenkantoren werken onder strikte regels voor professioneel gedrag, daarom is het aangeraden om voor gespecialiseerde software te opteren.
+\end{itemize}
+
+Dergelijke pocessen kunnen lang duren en in het geval van Deltalex is dit al gebeurd. Daarom bespreek ik in deze bachelorproef de ontwikkeling van een externe interface om specifieke taken sneller af te handelen.
 % Voor literatuurverwijzingen zijn er twee belangrijke commando's:
 % \autocite{KEY} => (Auteur, jaartal) Gebruik dit als de naam van de auteur
 %   geen onderdeel is van de zin.
@@ -40,23 +52,24 @@ Als je informatie over bronnen verzamelt in JabRef, zorg er dan voor dat alle no
 %   functie heeft in de zin (bv. ``Uit onderzoek door Doll & Hill (1954) bleek
 %   ...'')
 
-Je mag deze sectie nog verder onderverdelen in subsecties als dit de structuur van de tekst kan verduidelijken.
 
 %---------- Methodologie ------------------------------------------------------
 \section{Methodologie}%
 \label{sec:methodologie}
+Deze bachelorproef zal een combinatie zijn van een case study in advocantenkantoor Deltalex en een proof of concept van het platform om in het kantoor de administratieve workload zoveel mogelijk te minimaliseren. Deze implementatie valideert de haalbaarheid en de effectiviteit van de oplossing doorheen heel het kantoor, beginnende bij één specifieke advocaat. 
 
-Hier beschrijf je hoe je van plan bent het onderzoek te voeren. Welke onderzoekstechniek ga je toepassen om elk van je onderzoeksvragen te beantwoorden? Gebruik je hiervoor literatuurstudie, interviews met belanghebbenden (bv.~voor requirements-analyse), experimenten, simulaties, vergelijkende studie, risico-analyse, PoC, \ldots?
+Het onderzoek zal zich concentreren op accurate en objectieve resultaten en vermijdt onderzoekstechnieken die subjectieve data yielden, zoals ênquetes. Literatuurstudie, interviews en praktische data zullen de bouwstenen zijn van het uiteindelijke verdict van de implementatie. 
 
-Valt je onderwerp onder één van de typische soorten bachelorproeven die besproken zijn in de lessen Research Methods (bv.\ vergelijkende studie of risico-analyse)? Zorg er dan ook voor dat we duidelijk de verschillende stappen terug vinden die we verwachten in dit soort onderzoek!
+De voorgaande technische analyse zal voor mij een unieke kans zijn om op zowel het informaticadomein als in de administratieve/ juridische sector. Er zullen tools gebruikt worden als front-end-webassembly talen voor een moderne approach van een webinterface. Voor automatiatie van queries online zal er gebruik gemaakt worden van scripttalen en er zal ook grondig uitgezocht worden hoe men sjablonen zo effectief mogelijk kan aanpassen. 
 
-Vermijd onderzoekstechnieken die geen objectieve, meetbare resultaten kunnen opleveren. Enquêtes, bijvoorbeeld, zijn voor een bachelorproef informatica meestal \textbf{niet geschikt}. De antwoorden zijn eerder meningen dan feiten en in de praktijk blijkt het ook bijzonder moeilijk om voldoende respondenten te vinden. Studenten die een enquête willen voeren, hebben meestal ook geen goede definitie van de populatie, waardoor ook niet kan aangetoond worden dat eventuele resultaten representatief zijn.
-
-Uit dit onderdeel moet duidelijk naar voor komen dat je bachelorproef ook technisch voldoen\-de diepgang zal bevatten. Het zou niet kloppen als een bachelorproef informatica ook door bv.\ een student marketing zou kunnen uitgevoerd worden.
-
-Je beschrijft ook al welke tools (hardware, software, diensten, \ldots) je denkt hiervoor te gebruiken of te ontwikkelen.
-
-Probeer ook een tijdschatting te maken. Hoe lang zal je met elke fase van je onderzoek bezig zijn en wat zijn de concrete \emph{deliverables} in elke fase?
+Deze proef zal 12 weken in beslag nemen, zoals hieronder ingedeeld:
+\begin{itemize}
+        \item Requirementanalyse: 2 weken. \emph{Deliverable} -> Verslag van requirements
+        \item Ontwerp en technologieselectie: 2 weken. \emph{Deliverable} -> technologiestack en praktische planning voor implementatie
+        \item Implementatie: 4 weken\emph{Deliverable} -> werkende proof of concept
+        \item Evaluatie: 2 weken\emph{Deliverable} -> Evaluatierapport
+        \item Aanpassen van project en conclusie\emph{Deliverable} -> Aangepaste proof of concept, eindrapport en conclusie
+\end{itemize}
 
 %---------- Verwachte resultaten ----------------------------------------------
 \section{Verwacht resultaat, conclusie}%
