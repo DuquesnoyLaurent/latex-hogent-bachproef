@@ -2,35 +2,35 @@
 \section{Introductie}%
 \label{sec:introductie}
 
-Mijn bachelorproef spitst zich toe op het optimaliseren van de administratieve workload bij advocatenkantoor Deltalex door het invoeren van geautomatiseerde processen, alsook het
-ontwikkelen van een centrale webinterface om opzoekwerk te verrichten en ook de sjablonen van de meestgebruikte documenten bij te houden en te bewerken.
+Mijn bachelorproef spitst zich toe op het optimaliseren van de administratieve workload bij advocatenkantoor Deltalex. Dit zal gebeuren via het invoeren van geautomatiseerde processen, het
+ontwikkelen van een centrale webinterface om opzoekwerk te verrichten, daarbij ook een portaal om de sjablonen van de meestgebruikte documenten bij te houden en te bewerken.
 
 Dit onderzoek vindt zijn oorsprong in de vaststelling van veel tijdrovende en repetitieve taken die de efficiëntie van dit kantoor kunnen belemmeren,
 zoals het handmatig opzoeken van cliëntgegevens in openbare databases en het bijwerken van veelgebruikte documenttemplates.
 
-De onderzoeksvraag van mijn bachelorproef klinkt als volgt: "Hoe kunnen geautomatiseerde processen, in combinatie met een webinterface voor beheer, de administratieve
+De onderzoeksvraag van mijn bachelorproef luidt: "Hoe kunnen geautomatiseerde processen, in combinatie met een webinterface voor beheer, de administratieve
 last in advocatenkantoren verminderen en de efficiëntie bevorderen?"
 
 Het beoogde eindresultaat omvat niet alleen een werkend prototype van automatisatie en de bijbehorende webinterface,
 maar ook een grondig rapport met aanbevelingen voor implementatie in advocatenkantoren.
 
 Het succes van deze bachelorproef zal worden beoordeeld aan de hand van daadwerkelijke verbeteringen in efficiëntie en
-tijdsbesparing binnen het advocatenkantoor Deltalex.
+tijdsbesparing binnen advocatenkantoor Deltalex.
 
 %---------- Stand van zaken ---------------------------------------------------
-\section{Literatuurstudie: automatisatie en de selectie van CMS systemen in de advocatuur}%
+\section{Literatuurstudie: automatisatie en de selectie van CMS's in de advocatuur}%
 \label{sec:state-of-the-art}
 
 Consider one real-world example: if your firm had 12,000 documents to review, and each one had 75 questions to answer, the task will take weeks to complete. Even with a sizable team working in concert, the sheer volume of work is daunting. One of those, “Where do I even start?” types of tasks others might shrink from.
 But what if you started by working the process, not just digging into the work? By automating even a part of a task that large, you stand to shave hours off the time involved.
 \autocite{ThomsonReuters2023}
 
-Deze citatie illustreert dat investeren in een slimmere aanpak van je repetitieve taken zich zeker kan belonen. Dit is natuurlijk ook toepasbaar op een advocatenkantoor, volgende citatie illustreert het maken van documenten, waaronder dagvaardingen, invorderingen en mails.
+Deze citatie illustreert dat investeren in een efficiëntere aanpak van je repetitieve taken zeker kan lonen. Dit is natuurlijk ook toepasbaar op een advocatenkantoor, volgende citatie illustreert het maken van documenten, waaronder dagvaardingen, invorderingen en mails.
 
 Document creation, for example, requires a large amount of repetitive work. Diving right into the work may seem like the best way to get ahead, but by taking the time to define the fields in a document, and set up corresponding variables, it’s easy for a computer to automatically create custom, accurate documents on a scale that no human can match.
 \autocite{ThomsonReuters2023}
 
-Automatisatie kan ook executie van taken zoals het optimaliseren van indienprocedures en legal research. \autocite{Aston2023}
+Automatisatie kan ook executie van taken zoals indienprocedures en legal research exponentieel sneller maken. \autocite{Aston2023}
 
 Het huidige landschap van administratieve\\ tools is heel groot. In het geval van Deltalex (en andere kantoren) hebben ze gekozen voor een bepaald softwarepakket. Dit is veelal een moeilijke keuze omdat er heel veel pakketten beschikbaar zijn en deze bieden elk hun voor- en nadelen. De selectie van een dergelijke tool kan een moeizaam proces zijn, maar kan gegoten worden in volgende stappen.
 \autocite{Clio2023}
@@ -45,42 +45,34 @@ Het huidige landschap van administratieve\\ tools is heel groot. In het geval va
 \end{itemize}
 
 Dergelijke pocessen kunnen lang duren en in het geval van Deltalex is dit al gebeurd. Daarom bespreek ik in deze bachelorproef de ontwikkeling van een externe interface om specifieke taken sneller af te handelen.
-% Voor literatuurverwijzingen zijn er twee belangrijke commando's:
-% \autocite{KEY} => (Auteur, jaartal) Gebruik dit als de naam van de auteur
-%   geen onderdeel is van de zin.
-% \textcite{KEY} => Auteur (jaartal)  Gebruik dit als de auteursnaam wel een
-%   functie heeft in de zin (bv. ``Uit onderzoek door Doll & Hill (1954) bleek
-%   ...'')
-
 
 %---------- Methodologie ------------------------------------------------------
 \section{Methodologie}%
 \label{sec:methodologie}
-Deze bachelorproef zal een combinatie zijn van een case study in advocantenkantoor Deltalex en een proof of concept van het platform om in het kantoor de administratieve workload zoveel mogelijk te minimaliseren. Deze implementatie valideert de haalbaarheid en de effectiviteit van de oplossing doorheen heel het kantoor, beginnende bij één specifieke advocaat. 
+Deze bachelorproef zal een combinatie zijn van een case study in advocatenkantoor Deltalex en een proof of concept van het platform om in het kantoor de administratieve workload zoveel mogelijk te minimaliseren. Deze implementatie valideert de haalbaarheid en de effectiviteit van de oplossing doorheen heel het kantoor, beginnende bij één specifieke advocaat. 
 
-Het onderzoek zal zich concentreren op accurate en objectieve resultaten en vermijdt onderzoekstechnieken die subjectieve data yielden, zoals ênquetes. Literatuurstudie, interviews en praktische data zullen de bouwstenen zijn van het uiteindelijke verdict van de implementatie. 
+Het onderzoek zal zich concentreren op accurate en objectieve resultaten en vermijdt onderzoekstechnieken die subjectieve data yielden, zoals enquêtes. Literatuurstudie, interviews en praktische data zullen de bouwstenen zijn van het uiteindelijke verdict van de implementatie. 
 
-De voorgaande technische analyse zal voor mij een unieke kans zijn om op zowel het informaticadomein als in de administratieve/ juridische sector. Er zullen tools gebruikt worden als front-end-webassembly talen voor een moderne approach van een webinterface. Voor automatiatie van queries online zal er gebruik gemaakt worden van scripttalen en er zal ook grondig uitgezocht worden hoe men sjablonen zo effectief mogelijk kan aanpassen. 
+De voorgaande technische analyse zal voor mij een unieke kans zijn om op zowel het informaticadomein als in de administratieve/ juridische sector mijn skills bij te scherpen. Er zullen tools gebruikt worden als front-end-webassembly talen voor een moderne approach van een webinterface. Voor automatisatie van queries online zal er gebruik gemaakt worden van scripttalen en er zal ook grondig uitgezocht worden hoe men sjablonen zo effectief mogelijk kan aanpassen via MS Office XML-injecties in documenten. 
 
-Deze proef zal 12 weken in beslag nemen, zoals hieronder ingedeeld:
+Deze proef zal 12 weken in beslag nemen en is optimaal zoals onderstaand ingedeeld:
 \begin{itemize}
-        \item Requirementanalyse: 2 weken. \emph{Deliverable} -> Verslag van requirements
-        \item Ontwerp en technologieselectie: 2 weken. \emph{Deliverable} -> technologiestack en praktische planning voor implementatie
-        \item Implementatie: 4 weken\emph{Deliverable} -> werkende proof of concept
-        \item Evaluatie: 2 weken\emph{Deliverable} -> Evaluatierapport
-        \item Aanpassen van project en conclusie\emph{Deliverable} -> Aangepaste proof of concept, eindrapport en conclusie
+        \item Requirementanalyse: 2 weken.\\ \emph{Deliverable} -> Verslag van requirements
+        \item Ontwerp en technologieselectie: 2 weken.\\ \emph{Deliverable} -> technologiestack en praktische planning voor implementatie
+        \item Implementatie: 4 weken.\\ \emph{Deliverable} -> werkende proof of concept
+        \item Evaluatie: 2 weken. \\ \emph{Deliverable} -> Evaluatierapport
+        \item Aanpassen van project en conclusie: 2 weken.\\ \emph{Deliverable} -> Aangepaste proof of concept, eindrapport en conclusie
 \end{itemize}
 
 %---------- Verwachte resultaten ----------------------------------------------
 \section{Verwacht resultaat, conclusie}%
 \label{sec:verwachte_resultaten}
-Ik verwacht natuurlijk dat Deltalex geniet van mijn oplossing en dat alle vennoten hun tijd kunnen investeren in dingen die écht belangrijk zijn. Daarmee vermijden ze repititieve taken die er niet toe doen en zal ook de stress en frustratie op de werkvloer afnemen. Dat zal resulteren in een aangename werkomgeving waar iedereen zich amuseert. 
+Ik verwacht natuurlijk dat Deltalex geniet van mijn oplossing en dat alle vennoten hun tijd kunnen investeren in dingen die écht belangrijk zijn. Daarmee vermijden ze repetitieve taken die heel tijdrovend zijn. Ook zal de stress en frustratie op de werkvloer afnemen. Dat zal resulteren in een aangename werkomgeving waar iedereen zich productief bezighoudt en zichzelf amuseert in hun werk.
 
-Naar de praktische kant toe verwacht ik natuurlijk drie dingen:
-
+Naar de praktische kant toe verwacht ik drie dingen:
 \begin{itemize}
-        \item \emph{requirementsanalyse}
-        \item \emph{ontwerp en implementatie van gekozen technologieën}
+        \item \emph{Requirementsanalyse}
+        \item \emph{Ontwerp en implementatie van gekozen technologieën}
         \item \emph{Evaluatie en validatie}
 \end{itemize}
 
