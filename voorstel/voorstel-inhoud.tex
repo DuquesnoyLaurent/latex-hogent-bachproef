@@ -1,7 +1,7 @@
 %---------- Inleiding ---------------------------------------------------------
 \section{Introductie}%
 \label{sec:introductie}
-Mijn bachelorproef spitst zich toe op het optimaliseren van de administratieve workload bij advocatenkantoor Deltalex. Dit zal gebeuren via het invoeren van geautomatiseerde processen die geïntegreerd worden in het huidig softwarepakket van Deltalex en de advocaten zullen via een natural language processor hun commando's kunnen doorgeven aan een centrale backend. 
+Mijn bachelorproef spitst zich toe op het optimaliseren van de administratieve workload bij advocatenkantoor Deltalex. Dit zal gebeuren via het invoeren van geautomatiseerde processen die geïntegreerd worden in het huidig softwarepakket van Deltalex en de advocaten zullen via een natural language processor hun commando's kunnen doorgeven aan een centrale backend.
 
 Dit onderzoek vindt zijn oorsprong in de vaststelling van veel tijdrovende en repetitieve taken die de efficiëntie van dit kantoor kunnen belemmeren,
 zoals het handmatig opzoeken van cliëntgegevens in openbare databases en het bijwerken van veelgebruikte documenttemplates.
@@ -20,30 +20,29 @@ tijdsbesparing binnen advocatenkantoor Deltalex. Ook meten we het succes via per
 \label{sec:state-of-the-art}
 
 \begin{displayquote}
-    \textit{"One real-world example: if your firm had 12,000 documents to review, and each one had 75 questions to answer, the task will take weeks to complete. Even with a sizable team working in concert, the sheer volume of work is daunting. One of those, “Where do I even start?” types of tasks others might shrink from.
-    But what if you started by working the process, not just digging into the work? By automating even a part of a task that large, you stand to shave hours off the time involved."}
-    \autocite{ThomsonReuters2023}
+	\textit{"One real-world example: if your firm had 12,000 documents to review, and each one had 75 questions to answer, the task will take weeks to complete. Even with a sizable team working in concert, the sheer volume of work is daunting. One of those, “Where do I even start?” types of tasks others might shrink from.
+		But what if you started by working the process, not just digging into the work? By automating even a part of a task that large, you stand to shave hours off the time involved."}
+	\autocite{ThomsonReuters2023}
 \end{displayquote}
 Deze citatie illustreert dat investeren in een efficiëntere aanpak van je repetitieve taken zeker kan lonen. Dit is natuurlijk ook toepasbaar op een advocatenkantoor, volgende citatie illustreert het maken van documenten, waaronder dagvaardingen, invorderingen en mails.
 
 \begin{displayquote}
-    \textit{"Document creation, for example, requires a large amount of repetitive work. Diving right into the work may seem like the best way to get ahead, but by taking the time to define the fields in a document, and set up corresponding variables, it’s easy for a computer to automatically create custom, accurate documents on a scale that no human can match."}
-\autocite{ThomsonReuters2023}
+	\textit{"Document creation, for example, requires a large amount of repetitive work. Diving right into the work may seem like the best way to get ahead, but by taking the time to define the fields in a document, and set up corresponding variables, it’s easy for a computer to automatically create custom, accurate documents on a scale that no human can match."}
+	\autocite{ThomsonReuters2023}
 \end{displayquote}
 
 
 Automatisatie kan ook executie van taken zoals indienprocedures en legal research exponentieel sneller maken \autocite{Aston2023}.
 
 Het huidige landschap van administratieve\\ tools is heel groot. In het geval van Deltalex (en andere kantoren) hebben ze gekozen voor een softwarepakket om hen te assisteren met hun dagelijkse taken. Dit is veelal een moeilijke keuze omdat er heel veel pakketten beschikbaar zijn en deze bieden elk hun voor- en nadelen. De selectie van een dergelijke tool kan een moeizaam proces zijn, maar kan gegoten worden in volgende stappen.
-\autocite{Clio2023}
 
 \begin{itemize}
-	\item \emph{Kies tussen cloud- of lokale opslag:} Waar hosten? 
-        \item \emph{Bekijk de kosten- en onderhoudsverschillen:} Varieert sterk op basis van stap 1.
-        \item \emph{Zorg voor toegang tot informatie op afstand:} Veel advocaten werken soms op afstand, bv. vanuit een rechtbank.
-        \item \emph{Controleer de compatibiliteit met bestaande software:}\\ Complexere pakketten worden meestal pas aangekocht als het kantoor zich verder bevindt dan de startfase. M.a.w. er is zeker al bestaande data op oudere systemen.
-        \item \emph{Evalueer gebruiksgemak en trainingsvereisten:} Het is belangrijk dat iedere gebruiker zo snel en probleemloos met de nieuwe software aan de slag kan.
-        \item \emph{Zorg voor ethische naleving en beveiliging:} Advocatenkantoren werken onder strikte regels voor professioneel gedrag, daarom is het aangeraden om voor gespecialiseerde software te opteren.
+	\item \emph{Kies tussen cloud- of lokale opslag:} Waar hosten?
+	\item \emph{Bekijk de kosten- en onderhoudsverschillen:} Varieert sterk op basis van stap 1.
+	\item \emph{Zorg voor toegang tot informatie op afstand:} Veel advocaten werken soms op afstand, bv. vanuit een rechtbank.
+	\item \emph{Controleer de compatibiliteit met bestaande software:}\\ Complexere pakketten worden meestal pas aangekocht als het kantoor zich verder bevindt dan de startfase. M.a.w. er is zeker al bestaande data op oudere systemen.
+	\item \emph{Evalueer gebruiksgemak en trainingsvereisten:} Het is belangrijk dat iedere gebruiker zo snel en probleemloos met de nieuwe software aan de slag kan.
+	\item \emph{Zorg voor ethische naleving en beveiliging:} Advocatenkantoren werken onder strikte regels voor professioneel gedrag, daarom is het aangeraden om voor gespecialiseerde software te opteren. \autocite{Clio2023}
 \end{itemize}
 
 Dergelijke pocessen kunnen lang duren en in het geval van Deltalex is dit al gebeurd. Daarom bespreek ik in deze bachelorproef de ontwikkeling van een externe interface om specifieke taken sneller af te handelen.
@@ -51,31 +50,35 @@ Dergelijke pocessen kunnen lang duren en in het geval van Deltalex is dit al geb
 %---------- Methodologie ------------------------------------------------------
 \section{Methodologie}%
 \label{sec:methodologie}
-Deze bachelorproef zal een combinatie zijn van een case study in advocatenkantoor Deltalex en een proof of concept van het platform om in het kantoor de administratieve workload zoveel mogelijk te minimaliseren. Deze implementatie valideert de haalbaarheid en de effectiviteit van de oplossing doorheen heel het kantoor, beginnende bij één specifieke advocaat. 
+Deze bachelorproef zal een combinatie zijn van een case study in advocatenkantoor Deltalex om in het kantoor de administratieve workload zoveel mogelijk te minimaliseren. Deze implementatie valideert de haalbaarheid en de effectiviteit van de oplossing doorheen heel het kantoor, beginnende bij één specifieke advocaat.
 
-Het onderzoek zal zich concentreren op accurate en objectieve resultaten en vermijdt onderzoekstechnieken die subjectieve data yielden, zoals enquêtes. Literatuurstudie, interviews en praktische data zullen de bouwstenen zijn van het uiteindelijke verdict van de implementatie. 
+Het onderzoek zal zich concentreren op accurate en objectieve resultaten en vermijdt onderzoekstechnieken die subjectieve data produceren, zoals enquêtes. Literatuurstudie, interviews en praktische data zullen de bouwstenen zijn van het uiteindelijke verdict van de implementatie.
 
-De voorgaande technische analyse zal voor mij een unieke kans zijn om op zowel het informaticadomein als in de administratieve/ juridische sector mijn skills bij te scherpen. Er zullen tools gebruikt worden als front-end-webassembly talen voor een moderne approach van een webinterface. Voor automatisatie van queries online zal er gebruik gemaakt worden van scripttalen en er zal ook grondig uitgezocht worden hoe men sjablonen zo effectief mogelijk kan aanpassen via MS Office XML-injecties in documenten. 
+Om objectieve data zo veel mogelijk te garanderen, zal er tijdens het post-analyseproces gebruik gemaakt worden van het Technology Acceptance Model. Verschillende lagen hiervan zullen gecombineerd worden om zowel voor en na de implementatie te kunnen researchen naar de tevredenheid van het kantoor en de effectiviteit van de oplossing. 
+
+De voorgaande technische analyse is een perfect moment voor een student toegepaste informatica om op zowel in het informaticadomein als in de administratieve/ juridische sector hun skills bij te scherpen.
+
+Er zal gebruik gemaakt worden van een large-language-model om de vragen van de gebruikers te verwerken en te vertalen naar commando's. Deze worden op hun beurt doorgestuurd naar een interne API die toegang heeft tot de documentendatabase om taken uit te voeren zoals generatie van sjablonen, aanpassen van documenten, opstellen van brieven en andere generatieve taken. Naast generatieve taken kan deze structuur ook heel efficiënt dienen als zoekmachine die een volledig archief kan doorspitten aan een snelheid die exponentieel hoger ligt dan die van een mens.
 
 Deze proef zal 12 weken in beslag nemen en is optimaal zoals onderstaand ingedeeld:
 \begin{itemize}
-        \item Requirementanalyse: 2 weken.\\ \emph{Deliverable} -> Verslag van requirements
-        \item Ontwerp en technologieselectie: 2 weken.\\ \emph{Deliverable} -> technologiestack en praktische planning voor implementatie
-        \item Implementatie: 4 weken.\\ \emph{Deliverable} -> werkende proof of concept
-        \item Evaluatie: 2 weken. \\ \emph{Deliverable} -> Evaluatierapport
-        \item Aanpassen van project en conclusie: 2 weken.\\ \emph{Deliverable} -> Aangepaste proof of concept, eindrapport en conclusie
+	\item Requirementanalyse: 2 weken.\\ \emph{Deliverable} -> Verslag van requirements
+	\item Ontwerp en technologieselectie: 2 weken.\\ \emph{Deliverable} -> technologiestack en praktische planning voor implementatie
+	\item Implementatie: 4 weken.\\ \emph{Deliverable} -> werkende proof of concept
+	\item Evaluatie: 2 weken. \\ \emph{Deliverable} -> Evaluatierapport
+	\item Aanpassen van project en conclusie: 2 weken.\\ \emph{Deliverable} -> Aangepaste proof of concept, eindrapport en conclusie
 \end{itemize}
 
 %---------- Verwachte resultaten ----------------------------------------------
 \section{Verwacht resultaat, conclusie}%
 \label{sec:verwachte_resultaten}
-Ik verwacht natuurlijk dat Deltalex geniet van mijn oplossing en dat alle vennoten hun tijd kunnen investeren in dingen die écht belangrijk zijn. Daarmee vermijden ze repetitieve taken die heel tijdrovend zijn. Ook zal de stress en frustratie op de werkvloer afnemen. Dat zal resulteren in een aangename werkomgeving waar iedereen zich productief bezighoudt en zichzelf amuseert in hun werk.
+Ik verwacht natuurlijk dat Deltalex geniet van mijn oplossing en dat iedereen in het kantoor hun tijd kunnen investeren in dingen die écht belangrijk zijn. Daarmee vermijden ze bepaalde repetitieve taken die heel tijdrovend zijn. Een implementatie die succesvol geïmplementeerd wordt in een kantooromgeving, in dit geval een advocatenkantoor, kan grote voordelen hebben en met deze bachelorproef hoop ik die resultaten zo accuraat mogelijk in kaart te brengen.
 
 Naar de praktische kant toe verwacht ik drie dingen:
 \begin{itemize}
-        \item \emph{Requirementsanalyse}
-        \item \emph{Ontwerp en implementatie van gekozen technologieën}
-        \item \emph{Evaluatie en validatie}
+	\item \emph{Requirementsanalyse}
+	\item \emph{Ontwerp en implementatie van gekozen technologieën}
+	\item \emph{Evaluatie en validatie}
 \end{itemize}
 
-Ik hoop ook dat mijn bachelorproef kan motiveren waarom een kantoor (in dit geval advocatenkantoor) voordeel zou kunnen halen uit specifieke implementaties, die kunnen helpen aan bepaalde nicheproblemen, zonder een volledig nieuw systeem te implementeren. Een nieuw systeem moet aangekocht, aangeleerd en aangepast worden. Dit is een kwestie van hoge kosten, potentieel lange gewenning en mogelijke datamigratieproblemen. 
+Ik hoop ook dat mijn bachelorproef kan motiveren waarom een kantoor (in dit geval advocatenkantoor) voordeel zou kunnen halen uit specifieke implementaties, die kunnen helpen aan bepaalde nicheproblemen, zonder een volledig nieuw systeem te implementeren. Een nieuw systeem moet aangekocht, aangeleerd en aangepast worden. Dit is een kwestie van hoge kosten, potentieel lange gewenning en mogelijke datamigratieproblemen. Het verder bouwen op een bestaand systeem is in mijn ogen een efficiëntere strategie en ik zal dit ook proberen aantonen met deze bachelorproef.  
