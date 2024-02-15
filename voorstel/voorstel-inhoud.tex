@@ -1,9 +1,7 @@
 %---------- Inleiding ---------------------------------------------------------
 \section{Introductie}%
 \label{sec:introductie}
-
-Mijn bachelorproef spitst zich toe op het optimaliseren van de administratieve workload bij advocatenkantoor Deltalex. Dit zal gebeuren via het invoeren van geautomatiseerde processen, het
-ontwikkelen van een centrale webinterface om opzoekwerk te verrichten, daarbij ook een portaal om de sjablonen van de meestgebruikte documenten bij te houden en te bewerken.
+Mijn bachelorproef spitst zich toe op het optimaliseren van de administratieve workload bij advocatenkantoor Deltalex. Dit zal gebeuren via het invoeren van geautomatiseerde processen die geïntegreerd worden in het huidig softwarepakket van Deltalex en de advocaten zullen via een natural language processor hun commando's kunnen doorgeven aan een centrale backend. 
 
 Dit onderzoek vindt zijn oorsprong in de vaststelling van veel tijdrovende en repetitieve taken die de efficiëntie van dit kantoor kunnen belemmeren,
 zoals het handmatig opzoeken van cliëntgegevens in openbare databases en het bijwerken van veelgebruikte documenttemplates.
@@ -11,28 +9,32 @@ zoals het handmatig opzoeken van cliëntgegevens in openbare databases en het bi
 De onderzoeksvraag van mijn bachelorproef luidt: "Hoe kunnen geautomatiseerde processen, in combinatie met een webinterface voor beheer, de administratieve
 last in advocatenkantoren verminderen en de efficiëntie bevorderen?"
 
-Het beoogde eindresultaat omvat niet alleen een werkend prototype van automatisatie en de bijbehorende webinterface,
+Het beoogde eindresultaat omvat niet alleen een werkend prototype van automatisatie,
 maar ook een grondig rapport met aanbevelingen voor implementatie in advocatenkantoren.
 
 Het succes van deze bachelorproef zal worden beoordeeld aan de hand van daadwerkelijke verbeteringen in efficiëntie en
-tijdsbesparing binnen advocatenkantoor Deltalex.
+tijdsbesparing binnen advocatenkantoor Deltalex. Ook meten we het succes via persoonlijke feedback van de advocaten zelf, waar gepoogd zal worden deze zo objectief mogelijk op te nemen.
 
 %---------- Stand van zaken ---------------------------------------------------
 \section{Literatuurstudie: automatisatie en de selectie van CMS's in de advocatuur}%
 \label{sec:state-of-the-art}
 
-Consider one real-world example: if your firm had 12,000 documents to review, and each one had 75 questions to answer, the task will take weeks to complete. Even with a sizable team working in concert, the sheer volume of work is daunting. One of those, “Where do I even start?” types of tasks others might shrink from.
-But what if you started by working the process, not just digging into the work? By automating even a part of a task that large, you stand to shave hours off the time involved.
-\autocite{ThomsonReuters2023}
-
+\begin{displayquote}
+    \textit{"One real-world example: if your firm had 12,000 documents to review, and each one had 75 questions to answer, the task will take weeks to complete. Even with a sizable team working in concert, the sheer volume of work is daunting. One of those, “Where do I even start?” types of tasks others might shrink from.
+    But what if you started by working the process, not just digging into the work? By automating even a part of a task that large, you stand to shave hours off the time involved."}
+    \autocite{ThomsonReuters2023}
+\end{displayquote}
 Deze citatie illustreert dat investeren in een efficiëntere aanpak van je repetitieve taken zeker kan lonen. Dit is natuurlijk ook toepasbaar op een advocatenkantoor, volgende citatie illustreert het maken van documenten, waaronder dagvaardingen, invorderingen en mails.
 
-Document creation, for example, requires a large amount of repetitive work. Diving right into the work may seem like the best way to get ahead, but by taking the time to define the fields in a document, and set up corresponding variables, it’s easy for a computer to automatically create custom, accurate documents on a scale that no human can match.
+\begin{displayquote}
+    \textit{"Document creation, for example, requires a large amount of repetitive work. Diving right into the work may seem like the best way to get ahead, but by taking the time to define the fields in a document, and set up corresponding variables, it’s easy for a computer to automatically create custom, accurate documents on a scale that no human can match."}
 \autocite{ThomsonReuters2023}
+\end{displayquote}
 
-Automatisatie kan ook executie van taken zoals indienprocedures en legal research exponentieel sneller maken. \autocite{Aston2023}
 
-Het huidige landschap van administratieve\\ tools is heel groot. In het geval van Deltalex (en andere kantoren) hebben ze gekozen voor een bepaald softwarepakket. Dit is veelal een moeilijke keuze omdat er heel veel pakketten beschikbaar zijn en deze bieden elk hun voor- en nadelen. De selectie van een dergelijke tool kan een moeizaam proces zijn, maar kan gegoten worden in volgende stappen.
+Automatisatie kan ook executie van taken zoals indienprocedures en legal research exponentieel sneller maken \autocite{Aston2023}.
+
+Het huidige landschap van administratieve\\ tools is heel groot. In het geval van Deltalex (en andere kantoren) hebben ze gekozen voor een softwarepakket om hen te assisteren met hun dagelijkse taken. Dit is veelal een moeilijke keuze omdat er heel veel pakketten beschikbaar zijn en deze bieden elk hun voor- en nadelen. De selectie van een dergelijke tool kan een moeizaam proces zijn, maar kan gegoten worden in volgende stappen.
 \autocite{Clio2023}
 
 \begin{itemize}
