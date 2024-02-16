@@ -1,13 +1,14 @@
 %---------- Inleiding ---------------------------------------------------------
 \section{Introductie}%
 \label{sec:introductie}
-Mijn bachelorproef spitst zich toe op het optimaliseren van de administratieve workload bij advocatenkantoor Deltalex. Dit zal gebeuren via het invoeren van geautomatiseerde processen die geïntegreerd worden in het huidig softwarepakket van Deltalex en de advocaten zullen via een natural language processor hun commando's kunnen doorgeven aan een centrale backend.
+Mijn bachelorproef spitst zich toe op het optimaliseren van de administratieve workload bij advocatenkantoor Deltalex. Dit zal gebeuren via het invoeren van geautomatiseerde processen die \\geïntegreerd worden in het huidig softwarepakket van Deltalex. 
+De advocaten zullen via een natural language processor hun commando's kunnen doorgeven aan een centrale backend.
 
 Dit onderzoek vindt zijn oorsprong in de vaststelling van veel tijdrovende en repetitieve taken die de efficiëntie van dit kantoor kunnen belemmeren,
 zoals het handmatig opzoeken van cliëntgegevens in openbare databases en het bijwerken van veelgebruikte documenttemplates.
 
-De onderzoeksvraag van mijn bachelorproef luidt: "Hoe kunnen geautomatiseerde processen, in combinatie met een webinterface voor beheer, de administratieve
-last in advocatenkantoren verminderen en de efficiëntie bevorderen?"
+De onderzoeksvraag van mijn bachelorproef luidt: "Hoe kunnen geautomatiseerde processen de administratieve
+workload in advocatenkantoren verminderen en de efficiëntie bevorderen?"
 
 Het beoogde eindresultaat omvat niet alleen een werkend prototype van automatisatie,
 maar ook een grondig rapport met aanbevelingen voor implementatie in advocatenkantoren.
@@ -34,7 +35,10 @@ Deze citatie illustreert dat investeren in een efficiëntere aanpak van je repet
 
 Automatisatie kan ook executie van taken zoals indienprocedures en legal research exponentieel sneller maken \autocite{Aston2023}.
 
-Het huidige landschap van administratieve\\ tools is heel groot. In het geval van Deltalex (en andere kantoren) hebben ze gekozen voor een softwarepakket om hen te assisteren met hun dagelijkse taken. Dit is veelal een moeilijke keuze omdat er heel veel pakketten beschikbaar zijn en deze bieden elk hun voor- en nadelen. De selectie van een dergelijke tool kan een moeizaam proces zijn, maar kan gegoten worden in volgende stappen.
+Het huidige landschap van administratieve\\ tools is heel groot. 
+In het geval van Deltalex (en andere kantoren) hebben ze een softwarepakket afgewogen om hen te assisteren met hun dagelijkse taken. 
+Dit is veelal een moeilijke keuze omdat er heel veel pakketten beschikbaar zijn en deze bieden elk hun voor- en nadelen. 
+De selectie van een dergelijke tool kan een moeizaam proces zijn, maar kan gegoten worden in volgende stappen.
 
 \begin{itemize}
 	\item \emph{Kies tussen cloud- of lokale opslag:} Waar hosten?
@@ -45,20 +49,36 @@ Het huidige landschap van administratieve\\ tools is heel groot. In het geval va
 	\item \emph{Zorg voor ethische naleving en beveiliging:} Advocatenkantoren werken onder strikte regels voor professioneel gedrag, daarom is het aangeraden om voor gespecialiseerde software te opteren. \autocite{Clio2023}
 \end{itemize}
 
-Dergelijke pocessen kunnen lang duren en in het geval van Deltalex is dit al gebeurd. Daarom bespreek ik in deze bachelorproef de ontwikkeling van een externe interface om specifieke taken sneller af te handelen.
+Dergelijke pocessen kunnen lang duren en in het geval van Deltalex is dit al gebeurd. 
+Daarom bespreek ik in deze bachelorproef de ontwikkeling van een tool om specifieke taken te automatiseren en zodoende 
+sneller af te handelen.
 
 %---------- Methodologie ------------------------------------------------------
 \section{Methodologie}%
 \label{sec:methodologie}
-Deze bachelorproef zal een combinatie zijn van een case study in advocatenkantoor Deltalex om in het kantoor de administratieve workload zoveel mogelijk te minimaliseren. Deze implementatie valideert de haalbaarheid en de effectiviteit van de oplossing doorheen heel het kantoor, beginnende bij één specifieke advocaat.
+Deze bachelorproef zal een combinatie zijn van een case study in advocatenkantoor Deltalex om in het kantoor de 
+administratieve workload zoveel mogelijk te minimaliseren. 
+Deze implementatie valideert de haalbaarheid en de effectiviteit van de oplossing doorheen heel het kantoor, 
+beginnende bij één specifieke advocaat.
 
-Het onderzoek zal zich concentreren op accurate en objectieve resultaten en vermijdt onderzoekstechnieken die subjectieve data produceren, zoals enquêtes. Literatuurstudie, interviews en praktische data zullen de bouwstenen zijn van het uiteindelijke verdict van de implementatie.
+Het onderzoek zal zich concentreren op accurate en objectieve resultaten en vermijdt onderzoekstechnieken die 
+subjectieve data produceren, zoals enquêtes. Literatuurstudie, interviews en operationele data (zoals logs) zullen de 
+bouwstenen zijn van het uiteindelijke verdict van de implementatie.
 
-Om objectieve data zo veel mogelijk te garanderen, zal er tijdens het post-analyseproces gebruik gemaakt worden van het Technology Acceptance Model. Verschillende lagen hiervan zullen gecombineerd worden om zowel voor en na de implementatie te kunnen researchen naar de tevredenheid van het kantoor en de effectiviteit van de oplossing. 
+Om objectieve data zo veel mogelijk te garanderen, zal er tijdens het analyseproces gebruik gemaakt worden van het 
+Technology Acceptance Model. 
+Verschillende lagen hiervan zullen gecombineerd worden om zowel voor en na de implementatie te kunnen 
+researchen naar de tevredenheid van het kantoor en de effectiviteit van de oplossing. 
 
-De voorgaande technische analyse is een perfect moment voor een student toegepaste informatica om op zowel in het informaticadomein als in de administratieve/ juridische sector hun skills bij te scherpen.
+De voorgaande technische analyse is een perfect moment voor een student toegepaste informatica om op zowel in het 
+informaticadomein als in de administratieve/ juridische sector hun skills bij te scherpen.
 
-Er zal gebruik gemaakt worden van een large-language-model om de vragen van de gebruikers te verwerken en te vertalen naar commando's. Deze worden op hun beurt doorgestuurd naar een interne API die toegang heeft tot de documentendatabase om taken uit te voeren zoals generatie van sjablonen, aanpassen van documenten, opstellen van brieven en andere generatieve taken. Naast generatieve taken kan deze structuur ook heel efficiënt dienen als zoekmachine die een volledig archief kan doorspitten aan een snelheid die exponentieel hoger ligt dan die van een mens.
+Er zal gebruik gemaakt worden van een large-language-model om de vragen van de gebruikers te verwerken en te 
+vertalen naar commando's. 
+Deze worden op hun beurt doorgestuurd naar een interne API die toegang heeft tot de documentendatabase om taken uit 
+te voeren zoals generatie van sjablonen, aanpassen van documenten, opstellen van brieven en andere generatieve taken. 
+Naast generatieve taken kan deze structuur ook heel efficiënt dienen als zoekmachine die een volledig 
+archief kan doorspitten aan een snelheid die exponentieel hoger ligt dan die van een mens.
 
 Deze proef zal 12 weken in beslag nemen en is optimaal zoals onderstaand ingedeeld:
 \begin{itemize}
@@ -72,7 +92,10 @@ Deze proef zal 12 weken in beslag nemen en is optimaal zoals onderstaand ingedee
 %---------- Verwachte resultaten ----------------------------------------------
 \section{Verwacht resultaat, conclusie}%
 \label{sec:verwachte_resultaten}
-Ik verwacht natuurlijk dat Deltalex geniet van mijn oplossing en dat iedereen in het kantoor hun tijd kunnen investeren in dingen die écht belangrijk zijn. Daarmee vermijden ze bepaalde repetitieve taken die heel tijdrovend zijn. Een implementatie die succesvol geïmplementeerd wordt in een kantooromgeving, in dit geval een advocatenkantoor, kan grote voordelen hebben en met deze bachelorproef hoop ik die resultaten zo accuraat mogelijk in kaart te brengen.
+Ik verwacht natuurlijk dat Deltalex geniet van mijn oplossing en dat iedereen in het kantoor zijn of haar tijd kan investeren 
+in dingen die écht belangrijk zijn. Daarmee vermijden ze bepaalde repetitieve taken die heel tijdrovend zijn.
+Een implementatie die succesvol geïntegreerd wordt in een kantooromgeving, in dit geval een advocatenkantoor, 
+kan grote voordelen hebben. Met deze bachelorproef hoop ik die resultaten zo accuraat mogelijk in kaart te brengen.
 
 Naar de praktische kant toe verwacht ik drie dingen:
 \begin{itemize}
@@ -81,4 +104,9 @@ Naar de praktische kant toe verwacht ik drie dingen:
 	\item \emph{Evaluatie en validatie}
 \end{itemize}
 
-Ik hoop ook dat mijn bachelorproef kan motiveren waarom een kantoor (in dit geval advocatenkantoor) voordeel zou kunnen halen uit specifieke implementaties, die kunnen helpen aan bepaalde nicheproblemen, zonder een volledig nieuw systeem te implementeren. Een nieuw systeem moet aangekocht, aangeleerd en aangepast worden. Dit is een kwestie van hoge kosten, potentieel lange gewenning en mogelijke datamigratieproblemen. Het verder bouwen op een bestaand systeem is in mijn ogen een efficiëntere strategie en ik zal dit ook proberen aantonen met deze bachelorproef.  
+Ik hoop ook dat mijn bachelorproef kan motiveren waarom een kantoor (in dit geval advocatenkantoor) voordeel zou kunnen 
+halen uit specifieke implementaties, die kunnen helpen aan bepaalde nicheproblemen, zonder een volledig nieuw systeem 
+te implementeren. Een nieuw systeem moet aangekocht, aangeleerd en aangepast worden. 
+Dit is een kwestie van hoge kosten, potentieel lange gewenning en mogelijke datamigratieproblemen. 
+Het verder bouwen op een bestaand systeem is in mijn ogen een efficiëntere strategie en ik zal dit ook proberen aantonen 
+met deze bachelorproef.
