@@ -270,7 +270,7 @@
   \endgroup
 
   \begingroup
-  \raggedright\titlefont\color{title}\LARGE\@title\@addpunct{.}
+  \raggedright\titlefont\color{title}\LARGE\@title
   \endgroup
 
   \begingroup
