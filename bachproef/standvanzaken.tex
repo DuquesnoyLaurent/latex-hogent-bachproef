@@ -7,7 +7,9 @@
 
 % Pas na deze inleidende paragraaf komt de eerste sectiehoofding.
 
-Dit hoofdstuk bevat je literatuurstudie. De inhoud gaat verder op de inleiding, maar zal het onderwerp van de bachelorproef *diepgaand* uitspitten. De bedoeling is dat de lezer na lezing van dit hoofdstuk helemaal op de hoogte is van de huidige stand van zaken (state-of-the-art) in het onderzoeksdomein. Iemand die niet vertrouwd is met het onderwerp, weet nu voldoende om de rest van het verhaal te kunnen volgen, zonder dat die er nog andere informatie moet over opzoeken \autocite{Pollefliet2011}.
+Dit hoofdstuk bevat je literatuurstudie. De inhoud gaat verder op de inleiding, maar zal het onderwerp van de bachelorproef *diepgaand* uitspitten.
+De bedoeling is dat de lezer na lezing van dit hoofdstuk helemaal op de hoogte is van de huidige stand van zaken (state-of-the-art) in het onderzoeksdomein.
+Iemand die niet vertrouwd is met het onderwerp, weet nu voldoende om de rest van het verhaal te kunnen volgen, zonder dat die er nog andere informatie moet over opzoeken \autocite{Pollefliet2011}.
 
 Je verwijst bij elke bewering die je doet, vakterm die je introduceert, enz.\ naar je bronnen. In \LaTeX{} kan dat met het commando \texttt{$\backslash${textcite\{\}}} of \texttt{$\backslash${autocite\{\}}}. Als argument van het commando geef je de ``sleutel'' van een ``record'' in een bibliografische databank in het Bib\LaTeX{}-formaat (een tekstbestand). Als je expliciet naar de auteur verwijst in de zin (narratieve referentie), gebruik je \texttt{$\backslash${}textcite\{\}}. Soms is de auteursnaam niet expliciet een onderdeel van de zin, dan gebruik je \texttt{$\backslash${}autocite\{\}} (referentie tussen haakjes). Dit gebruik je bv.~bij een citaat, of om in het bijschrift van een overgenomen afbeelding, broncode, tabel, enz. te verwijzen naar de bron. In de volgende paragraaf een voorbeeld van elk.
 
@@ -15,4 +17,74 @@ Je verwijst bij elke bewering die je doet, vakterm die je introduceert, enz.\ na
 
 Let er ook op: het \texttt{cite}-commando voor de punt, dus binnen de zin. Je verwijst meteen naar een bron in de eerste zin die erop gebaseerd is, dus niet pas op het einde van een paragraaf.
 
-\lipsum[7-20]
+
+\section{Inefficiënt documentmanagement en repetitie}
+\label{sec:documentmanagement}
+
+\subsection{Repetitie}
+In een advocatenkantoor is het vanzelfsprekend dat er heel veel administratie aan bod komt. Denk maar aan het opstellen van dagvaardingen,
+ingebrekestellingen, e-mails, aangetekende brieven en andere communicatie.
+
+Natuurlijk dringt zich dit op dat deze taken veel tijd in beslag kunnen nemen. Naast een administratief spectrum gaat het ook over verdediging van cliënten, pleiten en ander rechtbankwerk.
+
+Moest er daar dan nog extra repetitief bureauwerk aan te pas komen, kan dit een obstakel vormen naar productiviteit toe. Hiervoor onderstaande citatie ter illustratie:
+\begin{displayquote}
+	\textit{"How much time is spent in repetitive tasks in the workplace? Today the typical office worker spends 10\% of their time on manual data entry into business applications,
+		such as the ERP system, CRM or spreadsheets. In total, they spend over 50\% of work time creating or updating documents, eg. PDFs, spreadsheets or word documents \autocite{Workfellow}."}
+\end{displayquote}
+
+Natuurlijk is dit een generieke citatie die handelt over PDFs, spreadsheets en dergelijke, maar ze is zeker ook toepasbaar in een advocatenkantoor.
+
+Het komt er op neer dat repetitie een killer is voor productiviteit omdat het juist zoveel tijd in beslag neemt,
+volgende citatie handelt over het aantal copy pastes van een gemiddelde administratieve medewerker:
+
+\begin{displayquote}
+	\begin{itemize}
+		\item \emph {A typical office worker spends 3 hours working on spreadsheets each week, for example in Microsoft Excel or Google Sheets.}
+		\item \emph {A typical office worker spends almost 2 1/2 hours in business communications or email applications, such as Outlook.}
+		\item \emph {A typical office worker spends over 1 1/2 hours each week searching and organizing files, for example in the shared file service such as Sharepoint or Google Drive.}
+		\item \emph {A typical office worker spends 1 1/2 hours each week copy-pasting or manually entering data into business applications, such as the ERP or CRM.} \autocite{Workfellow}
+	\end{itemize}
+\end{displayquote}
+
+\subsection{Het managen van grote hoeveelheden documenten}
+Doorheen de jaren wordt er een heel groot archief aan documenten opgebouwd.
+Het doorzoeken en onderhouden van dit archief kan voor velen een grote uitdaging vormen en ook heel veel tijd in beslag nemen,
+dit kan de productiviteit van een kantoor in het gedrang brengen en heel tijdrovend zijn, zeker als het archief inefficiënt is opgebouwd.
+
+Het opzoeken van documenten in een archief is een mooi voorbeeld om te vergelijken tussen menselijke en machinale zoekmethodes.
+Het opzoeken van data in een archief kan parallel gesteld worden met een zoekmachine. Volgende citatie schetst oppervlakkig het verschil tussen
+menselijke en digitale methodes.
+
+\begin{displayquote}
+	Search engines have been with us for several decades as an integral part of our digital life.
+	We are casually searching over billions of web pages to retrieve and share information from various resources.
+	While humans are very good at conversational context and background knowledge which helps them to deal with intrinsic ambiguity of words,
+	it may not be true in case of search engines, especially when it comes to out-of-the-vocabulary searches \autocite{Medium}
+\end{displayquote}
+
+Het artikel handelt verder over semantische zoekmethodes en schetst een voorbeeld met een voorbeeld-dataset en een proof-of-concept in Python.
+
+Zoekmachines gebruikten echter niet altijd een semantische methodiek:
+
+\begin{displayquote}
+	At first, search engines were lexical: the search engine looked for literal matches of the query words,
+	without understanding of the query’s meaning and only returning links that contained the exact query. \autocite{Medium}
+\end{displayquote}
+
+Lexicaal zoeken is vrij simpel te implementeren en is een vrij primitief concept. Semantisch zoeken is daarentegen wat complexer te integreren:
+
+\begin{displayquote}
+	On the other hand, “Semantic Search” can simplify query building, because it is supported by automated natural language processing programs
+	i.e. using Latent Semantic Indexing — a concept that search engines use to discover how a keyword and content work together to mean the same thing. \autocite{Medium}
+\end{displayquote}
+
+Wat heeft dit nu te maken met documentmanagement? Een zoekmachine is een polyvalente tool die ingezet kan worden op verschillende datasets. Dit kan ook een volledig archief zijn van 
+documenten in een advocatenkantoor. Het implementeren van een semantisch zoekalgoritme kan een oplossing bieden op het eerste subprobleem: inefficiënt zoeken in dit archief. 
+
+\begin{displayquote}
+	In brief, LSI(Latent Semantic Index) does not require an exact match to return useful results. 
+	Where a plain keyword search will fail if there is no exact match, 
+	LSI will often return relevant documents that don’t contain the keyword at all. \autocite{Medium}
+\end{displayquote}
+
