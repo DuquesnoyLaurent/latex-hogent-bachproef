@@ -60,7 +60,7 @@ menselijke en digitale methodes.
 	Search engines have been with us for several decades as an integral part of our digital life.
 	We are casually searching over billions of web pages to retrieve and share information from various resources.
 	While humans are very good at conversational context and background knowledge which helps them to deal with intrinsic ambiguity of words,
-	it may not be true in case of search engines, especially when it comes to out-of-the-vocabulary searches \autocite{Medium}
+	it may not be true in case of search engines, especially when it comes to out-of-the-vocabulary searches \autocite{MediumSemanticSearch}
 \end{displayquote}
 
 Het artikel handelt verder over semantische zoekmethodes en schetst een voorbeeld met een voorbeeld-dataset en een proof-of-concept in Python.
@@ -69,30 +69,54 @@ Zoekmachines gebruikten echter niet altijd een semantische methodiek:
 
 \begin{displayquote}
 	At first, search engines were lexical: the search engine looked for literal matches of the query words,
-	without understanding of the query’s meaning and only returning links that contained the exact query. \autocite{Medium}
+	without understanding of the query’s meaning and only returning links that contained the exact query. \autocite{MediumSemanticSearch}
 \end{displayquote}
 
 Lexicaal zoeken is vrij simpel te implementeren en is een vrij primitief concept. Semantisch zoeken is daarentegen wat complexer te integreren:
 
 \begin{displayquote}
 	On the other hand, “Semantic Search” can simplify query building, because it is supported by automated natural language processing programs
-	i.e. using Latent Semantic Indexing — a concept that search engines use to discover how a keyword and content work together to mean the same thing. \autocite{Medium}
+	i.e. using Latent Semantic Indexing — a concept that search engines use to discover how a keyword and content work together to mean the same thing. \autocite{MediumSemanticSearch}
 \end{displayquote}
 
-Wat heeft dit nu te maken met documentmanagement? Een zoekmachine is een polyvalente tool die ingezet kan worden op verschillende datasets. Dit kan ook een volledig archief zijn van 
-documenten in een advocatenkantoor. Het implementeren van een semantisch zoekalgoritme kan een oplossing bieden op het eerste subprobleem: inefficiënt zoeken in dit archief. 
+Wat heeft dit nu te maken met documentmanagement? Een zoekmachine is een polyvalente tool die ingezet kan worden op verschillende datasets. Dit kan ook een volledig archief zijn van
+documenten in een advocatenkantoor. Het implementeren van een semantisch zoekalgoritme kan een oplossing bieden op het eerste subprobleem: inefficiënt zoeken in dit archief.
 
 \begin{displayquote}
-	In brief, LSI(Latent Semantic Index) does not require an exact match to return useful results. 
-	Where a plain keyword search will fail if there is no exact match, 
-	LSI will often return relevant documents that don’t contain the keyword at all. \autocite{Medium}
+	In brief, LSI(Latent Semantic Index) does not require an exact match to return useful results.
+	Where a plain keyword search will fail if there is no exact match,
+	LSI will often return relevant documents that don’t contain the keyword at all. \autocite{MediumSemanticSearch}
 \end{displayquote}
 
 \subsection{Obstakels in research van rechtszaken}
 Bij een (oppervlakkige) verkennende audit bij advocatenkantoor Deltalex viel op dat er veel tijd wordt gespendeerd aan het opzoeken van dossiergerelateerde informatie. Denk hierbij maar aan
-contactgegevens (ondernemingsnummer, adres, ...) van een cliënt, dossierdata, technische specificaties, enz. 
+contactgegevens (ondernemingsnummer, adres, ...) van een cliënt, dossierdata, technische specificaties, enz.
 
 Voor een advocaat kan dit een bijzonder lang en repetitief proces vormen indien manueel uitgevoerd. Gelukkig kunnen hier technieken zoals RAG (Retrieval-Augmented Generation) een grote hulp
-bij bewijzen:
+bij bewijzen. RAG (Retrieval Augmented Generation) is een van de grootste use cases voor LLM's en is een framework dat de fundamentele trainingsdata van een Large Language Model
+combineert met bestaande data in een database. Zodoende kan een model gegronde antwoorden geven, gebaseerd op betrouwbare en relevante informatie.
+
+Een quote van Medium legt uit hoe RAG werkt in grote lijnen:
+
+\begin{displayquote}
+	A typical RAG process, as pictured below, has an LLM, a collection of enterprise documents, and supporting infrastructure to improve information retrieval and answer construction.
+	The RAG pipeline looks at the database for concepts and data that seem similar to the question being asked, extracts the data from a vector database and reformulates the data into
+	an answer that is tailored to the question asked. This makes RAG a powerful tool for companies looking to harness their existing data repositories for enhanced decision-making
+	and information access. \autocite{MediumRAG}
+	\begin{figure}[h]
+		\includegraphics[width=\textwidth]{RAG.png}
+		\centering
+	\end{figure}
+\end{displayquote}
+\newpage
+
+RAG kan hier dienst doen als een mogelijke plaatsvervanger voor manuele research en het opstellen van communicatiedocumenten (zoals aangetekende brieven, invorderingen, ...). Deze optie zal in
+een later stadium van deze bachelorproef geëvealueerd worden. Advocatuur is een heel toepasselijk gebied voor RAG:
+
+\begin{displayquote}
+	Practically, RAG is likely preferable in environments like
+	legal, customer service, and financial services where the ability to
+	dynamically pull vast amounts of up-to-date data enables the most accurate and comprehensive responses.
+\end{displayquote}
 
 
