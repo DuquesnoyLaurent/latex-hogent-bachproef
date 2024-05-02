@@ -121,7 +121,7 @@ een later stadium van deze bachelorproef geëvealueerd worden. Advocatuur is een
 
 \section{Het automatiseren van administratieve taken}
 Het manueel en persoonlijk afhandelen van 'simpele' administratieve taken door een advocaat zelf kunnen heel veel tijdverlies veroorzaken. Een digitale assistent kan bepaalde zaken
-overnemen zoals het inplannen van consultaties, agendabeheer en routine communicatie. In hoeverre kan een systeem dit overnemen? Is dit mogelijk? 
+overnemen zoals het inplannen van consultaties, agendabeheer en routine		communicatie. In hoeverre kan een systeem dit overnemen? Is dit mogelijk? 
 De eerste dingen waar een ontwikkelaar van een dergelijke applicatie aan zou kunnen denken zijn zaken zoals hoe we een assistent toegang (lezen en schrijven) kunnen/ mogen geven tot 
 de persoonlijke agenda's van advocaten, programma's, ... Wat als er iets fout gaat en heel de agenda wordt overschreven met nutteloze data? Wat als afspraken bevestigd worden maar niet ingepland? 
 
@@ -135,4 +135,26 @@ Aan de andere kant kan een virtuele assistent wel instaan voor taken zoals agend
 Een dergelijke implementatie vereist integratie met bestaande software zoals Office365 (Microsoft) en ERP programma's en analyse van persoonlijke communicatie van een advocaat en zijn cliënt,
 wat ons naadloos overbrengt naar de veiligheid van data tijdens het gebruik van digitale tools en digitale assistenten. 
 
-\section{Privacy en veiligheid van data}
+\section{Privacy en veiligheid  van data}
+In advocatenkantoren wordt op een dagelijkse basis omgegaan met vertrouwelijke informatie van cliënten. Het is dan natuurlijk meer dan logisch dat de veiligheid van dergelijke informatie van
+elementair belang is. Een citaat van "Legal buddies" staaft een paar protocollen om datasecurity en compliance met strikte dataregulaties zoals GDPR in de Europese Unie:
+
+\begin{displayquote}
+	Proper protocols must be implemented to keep sensitive case data protected and align usage to regional regulations.
+	\begin{itemize}
+		\item When working with legal AI systems, law firms must implement security controls like data encryption, access management, network segmentation, and intrusion detection. 
+		\item Usage and data sharing policies should conform to relevant privacy laws and professional ethics rules around legal data confidentiality. 
+		\item Firms can request third-party audits of AI provider security infrastructure for assurance on protection mechanisms. 
+		\item Using on-premise AI options instead of cloud-based ones may better align with internal compliance rules and risk tolerance levels. 
+		\item Regional laws may also dictate data residency and cross-border transfer restrictions. Understanding jurisdictional nuances allows appropriate legal AI adoption. 
+		\item Overall, prudent security and compliance positioning is vital for law firms exploring innovative technologies like AI-powered legal assistants. Partnering with trusted, vetted providers also reduces risk exposure. 
+	\end{itemize}
+
+	With deliberate planning around privacy, ethics and regional legislation, firms can safely pursue AI efficiency gains.\autocite{LegalBuddies}
+\end{displayquote}
+
+Bij verdere research blijkt het grootste risico dat data van cliënten (onveilig) over het internet gestuurd wordt of dat de data blijft plakken op de cloud server van een externe tool. 
+De betere en veiligste optie blijkt hier om oftewel lokaal of in private cloud te hosten. In het hoofdstuk "Methodologie" zullen verschillende technologieën besproken worden om een dergelijke
+setup te bereiken. 
+
+
