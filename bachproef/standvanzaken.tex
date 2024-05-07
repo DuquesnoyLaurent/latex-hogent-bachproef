@@ -121,19 +121,19 @@ een later stadium van deze bachelorproef geëvealueerd worden. Advocatuur is een
 
 \section{Het automatiseren van administratieve taken}
 Het manueel en persoonlijk afhandelen van 'simpele' administratieve taken door een advocaat zelf kan heel veel tijdverlies veroorzaken. Een digitale assistent kan bepaalde zaken
-overnemen zoals het inplannen van consultaties, agendabeheer en routine		communicatie. In hoeverre kan een systeem dit overnemen? Is dit mogelijk? 
-De eerste dingen waar een ontwikkelaar van een dergelijke applicatie aan zou kunnen denken zijn zaken zoals hoe we een assistent toegang (lezen en schrijven) kunnen/ mogen geven tot 
-de persoonlijke agenda's van advocaten, programma's, ... Wat als er iets fout gaat en heel de agenda wordt overschreven met nutteloze data? Wat als afspraken bevestigd worden maar niet ingepland? 
+overnemen zoals het inplannen van consultaties, agendabeheer en routine		communicatie. In hoeverre kan een systeem dit overnemen? Is dit mogelijk?
+De eerste dingen waar een ontwikkelaar van een dergelijke applicatie aan zou kunnen denken zijn zaken zoals hoe we een assistent toegang (lezen en schrijven) kunnen/ mogen geven tot
+de persoonlijke agenda's van advocaten, programma's, ... Wat als er iets fout gaat en heel de agenda wordt overschreven met nutteloze data? Wat als afspraken bevestigd worden maar niet ingepland?
 
-Het is ook niet echt ethisch verantwoord als een cliënt een som betaalt voor persoonlijke aandacht en communicatie en dan gegenereerde content voorgeschoteld krijgt. 
-Aan de andere kant kan het ook zijn dat een advocaat in tijdnood raakt en dat hij een snelle content boost ter zijn beschikking heeft. 
+Het is ook niet echt ethisch verantwoord als een cliënt een som betaalt voor persoonlijke aandacht en communicatie en dan gegenereerde content voorgeschoteld krijgt.
+Aan de andere kant kan het ook zijn dat een advocaat in tijdnood raakt en dat hij een snelle content boost ter zijn beschikking heeft.
 
 Een LLM (dat ook gebruikt wordt voorgaande zaken) is hiervoor een ideale oplossing. Het kan dienen voor inspiratie of de generatie van een volledig document. Natuurlijk moet
-een advocaat een persoonlijke behandeling verstrekken aan de cliënt dus deze optie wordt best alleen gebruikt in geval van nood. 
+een advocaat een persoonlijke behandeling verstrekken aan de cliënt dus deze optie wordt best alleen gebruikt in geval van nood.
 
-Aan de andere kant kan een virtuele assistent wel instaan voor taken zoals agenda- en memobeheer. 
+Aan de andere kant kan een virtuele assistent wel instaan voor taken zoals agenda- en memobeheer.
 Een dergelijke implementatie vereist integratie met bestaande software zoals Office365 (Microsoft) en ERP programma's en analyse van persoonlijke communicatie van een advocaat en zijn cliënt,
-wat ons naadloos overbrengt naar de veiligheid van data tijdens het gebruik van digitale tools en digitale assistenten. 
+wat ons naadloos overbrengt naar de veiligheid van data tijdens het gebruik van digitale tools en digitale assistenten.
 
 \section{Privacy en veiligheid  van data}
 In advocatenkantoren wordt op een dagelijkse basis omgegaan met vertrouwelijke informatie van cliënten. Het is dan natuurlijk meer dan logisch dat de veiligheid van dergelijke informatie van
@@ -142,26 +142,53 @@ elementair belang is. Een citaat van "Legal buddies" staaft een paar protocollen
 \begin{displayquote}
 	Proper protocols must be implemented to keep sensitive case data protected and align usage to regional regulations.
 	\begin{itemize}
-		\item When working with legal AI systems, law firms must implement security controls like data encryption, access management, network segmentation, and intrusion detection. 
-		\item Usage and data sharing policies should conform to relevant privacy laws and professional ethics rules around legal data confidentiality. 
-		\item Firms can request third-party audits of AI provider security infrastructure for assurance on protection mechanisms. 
-		\item Using on-premise AI options instead of cloud-based ones may better align with internal compliance rules and risk tolerance levels. 
-		\item Regional laws may also dictate data residency and cross-border transfer restrictions. Understanding jurisdictional nuances allows appropriate legal AI adoption. 
-		\item Overall, prudent security and compliance positioning is vital for law firms exploring innovative technologies like AI-powered legal assistants. Partnering with trusted, vetted providers also reduces risk exposure. 
+		\item When working with legal AI systems, law firms must implement security controls like data encryption, access management, network segmentation, and intrusion detection.
+		\item Usage and data sharing policies should conform to relevant privacy laws and professional ethics rules around legal data confidentiality.
+		\item Firms can request third-party audits of AI provider security infrastructure for assurance on protection mechanisms.
+		\item Using on-premise AI options instead of cloud-based ones may better align with internal compliance rules and risk tolerance levels.
+		\item Regional laws may also dictate data residency and cross-border transfer restrictions. Understanding jurisdictional nuances allows appropriate legal AI adoption.
+		\item Overall, prudent security and compliance positioning is vital for law firms exploring innovative technologies like AI-powered legal assistants. Partnering with trusted, vetted providers also reduces risk exposure.
 	\end{itemize}
 
 	With deliberate planning around privacy, ethics and regional legislation, firms can safely pursue AI efficiency gains.\autocite{LegalBuddies}
 \end{displayquote}
 
-Bij verdere research blijkt het grootste risico dat data van cliënten (onveilig) over het internet gestuurd wordt of dat de data blijft plakken op de cloud server van een externe tool. 
+Bij verdere research blijkt het grootste risico dat data van cliënten (onveilig) over het internet gestuurd wordt of dat de data blijft plakken op de cloud server van een externe tool.
 De betere en veiligste optie blijkt hier om oftewel lokaal of in private cloud te hosten. In het hoofdstuk "Methodologie" zullen verschillende technologieën besproken worden om een dergelijke
-setup te bereiken. 
+setup te bereiken.
 
 \section{Gebruiksgemak en aanpassing}
-Een van de belangrijkste dingen in het inbrengen van nieuwe software in een bestaand kantoor is het gebruiksgemak en toegankelijkheid van de nieuwe programma's. Om deze zaken te garanderen, 
-moeten er een paar principes nauwlettend gevolgd worden. De beste manier om een design te krijgen waar de gebruiker centraal in staat is het verstaan van de requirements, pijnpunten en 
-workflows van advocaten. Dit is van elementair belang om een intuïtief systeem te bouwen dat naadloos integreert in hun workflow. Natuurlijk is dit niet het enige. 
-Laten we samen een paar belangrijke aspecten overlopen. 
+Een van de belangrijkste dingen in het inbrengen van nieuwe software in een bestaand kantoor is het gebruiksgemak en toegankelijkheid van de nieuwe programma's. Om deze zaken te garanderen,
+moeten er een paar principes nauwlettend gevolgd worden. De beste manier om een design te krijgen waar de gebruiker centraal in staat is het verstaan van de requirements, pijnpunten en
+workflows van advocaten. Dit is van elementair belang om een intuïtief systeem te bouwen dat naadloos integreert in hun workflow. Natuurlijk is dit niet het enige.
+Laten we samen een paar belangrijke aspecten overlopen.
 
 \subsection{Een intuïtieve interface}
+De interface van een digitale assistent moet er overzichtelijk en netjes uitzien. Makkelijke navigatie is van elementair belang. Advocaten moeten snel en makkelijk de features kunnen aanspreken
+zonder al te veel clutter en nutteloze toepassingen. De beste interface is er een die minimaal en ontworpen is met de gebruiker in het achterhoofd. Deze stelling kan onderbouwd worden met enkele
+designprincipes uit een artikel van Zefort.com:
 
+\begin{displayquote}
+	\textbf{Simplicity and clarity:}
+	By reducing complexity and providing clear instructions, legal services become more user-friendly and facilitate better access to justice for all.
+	\autocite{Zefort}
+
+	\textbf{Visual Hierarchy and Information Organization:}
+	Prioritizing content through size, color, and contrast also aids in emphasizing key points and important details.
+	\autocite{Zefort}
+
+	\textbf{Clear and Accessible Navigation:}
+	A well-designed navigation system helps lawyers, clients, and other users locate the information they need with minimal effort.
+	\autocite{Zefort}
+\end{displayquote}
+
+\subsection{Natural language processing}
+Om de leercurve van een digitale assistent te verlagen, moet hij in staat zijn om queries in natuurlijke taal te kunnen verwerken. 
+Dit laat advocaten en medewerkers toe om de assistent te benaderen op dezelfde manier als een menselijke collega. Meer over NLP in het hoofdstuk methodologie. 
+
+\subsection{Naadloze integratie}
+Een dichte integratie met de bestaande software die gebruikt wordt is misschien wel één van de belangrijkste van de drie. Het succes van deze implementatie valt of staat met hoe makkelijk 
+een advocaat ze kan integreren in hun bestaande workflow. Dit elimineert manuele invoer van manuele data of het constant switchen tussen verschillende applicaties. 
+
+In conclusie: het succes van een digitale assistent (of in extensie bijna iedere digitale toepassing) hangt grotendeels af van de gebruikerservaring. 
+Als je de voorgaande drie zaken zult prioriteren in de ontwikkeling van een tool, kun je makkelijker het volledige potentieel ervan bereiken en zodoende een kwalitatieve, nuttige tool leveren. 
