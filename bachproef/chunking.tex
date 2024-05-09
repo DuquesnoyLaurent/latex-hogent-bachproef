@@ -1,0 +1,30 @@
+\chapter{Context-aware chunking van verzamelde data}
+Nu alle data in een juist formaat en met metadata in de database steekt, is het tijd voor het volgende ordeningsprincipe: chunking.
+Chunking is het principe van extensieve ongestructureerde data op te delen in kleinere, logische stukken, oftewel chunks.
+Dit proces kan verdeeld worden in verschillende stappen.
+
+\begin{enumerate}
+	\item \textbf{Voorbereiden en reinigen van data:} Bekijk alle data en verwijder onnodige opmaak, titels en punctuatie. Deze stap is optioneel maar het
+	      kan altijd helpen om de verzamelde data eens te overlopen en zien of er geen grote gaten in zitten.
+	\item \textbf{Tokenization van de tekst:} De data kan nu onderverdeeld worden in tokens, oftewel individuele woorden.
+	      Dit kan bereikt worden met algoritmes zoals SpaCy of NLTK,
+	      dit zijn Natural Language Processing algoritmes.
+	\item \textbf{Het detecteren van zinnen:} Nu de data verdeeld is in tokens, is het tijd om met de hulp van sentence boundary algoritmes de zinnen te
+	      detecteren die coherente zinnen vormen. Er zijn ook veel NLP bibliotheken die deze algoritmes implementeren.
+	\item \textbf{Groeperen van zinnen in chunks:} Nu de zinnen verdeeld zijn, is het tijd om deze te verdelen in groepen, oftewel chunks.
+	      De manier waarop dit kan gebeuren kan via een woordlimiet per chunk, een specifieke topic per chunk of een semantische/ syntactische gelijkenis van zinnen.
+\end{enumerate}
+
+Nu deze chunks gegroepeerd zijn, vervangen we de data door de chunks in de database en slaan we ze op samen met de metadata van de documenten.
+Deze chunks kunnen voorgesteld worden als vectoren en kunnen samen geïmplementeerd worden in een vector database.
+Dit type database slaat vectoren op op basis van hun similariteit met andere vectors en deze databases gebruiken veelal het Approximate Nearest Neighbour algorithm.
+
+Een citaat van rockset.com verduidelijkt dit principe:
+
+\begin{displayquote}
+	With the evolution of machine learning, neural networks and large language models, organizations can easily transform unstructured data into embeddings, commonly represented as vectors.
+	Vector search operates across these vectors to identify patterns and quantify similarities between components of the underlying unstructured data. 
+	\autocite{Rockset}
+\end{displayquote}
+
+Nu de data verdeeld is in chunks, kunnen we verdergaan naar de volgende stap, het integreren van Ollama met onze database.
