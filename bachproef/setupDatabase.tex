@@ -1,0 +1,46 @@
+\chapter{Opzetten van documentendatabase}
+Er zijn verschillende stappen nodig om een grote hoeveelheid documenten te gieten in een database. 
+Deze worden hieronder stap voor stap behandeld. 
+
+\section{Inname van documenten}
+Nadat de verzameling van documenten gebeurd is, zijn deze natuurlijk allemaal in pdf, docx of dergelijk documentformaat. 
+Het is natuurlijk de bedoeling dat al deze documenten naar tekst te converteren zodat een taalmodel er efficiënt mee overweg kan. 
+Om text te extraheren uit documenten kan men verschillende tools gebruiken. 
+Na wat research online zijn er heel veel verschillende alternatieven, maar de meeste zijn betalend en al gegoten in programma's die gebruiksklaar zijn. 
+Om over al die tools te beschikken en om via een uniforme manier tekst te extraheren, is er een heel goeie tool in Java, Apache Tika. 
+
+\subsection{Apache Tika}
+Tika is een framework gemaakt door Apache, dit specialiseert op het extraheren van gestructureerde tekstdata en metadata uit verschillende documentdatatypes. 
+De sterkte van Tika is dat het eigenlijk een wrapper is rond verschillende bibliotheken en ze allemaal samenbrengt in één tool.
+Al deze verschillende bestandstypes kunnen door één enkele interface worden verwerkt. 
+Dit maakt Tika een heel goeie tool voor zoekmachineindexering, tekstanalyse en vertaling.
+Deze tool zou een goede kandidaat zijn om in eerste instantie alle data van alle bestanden te converteren naar bijvoorbeeld pure tekst of HTML. 
+
+Met een tool zoals JavaMail kan men een inbox uitlezen en recursief deze mails individueel behandelen, dit maakt het makkelijk om deze content in onze database in te brengen. 
+Het voordeel van een totaal mailbestand in onze database te plaatsen, 
+is dat een assistent dan efficiënter is in het opstellen van communicatie die zal matchen met de schrijfstijl van de advocaat waar de mailbox aan toebehoort. 
+
+\section{Opzetten van database}
+Nadat er documenten omgezet zijn in tekst, moeten deze in een database terechtkomen. 
+Dit is allemaal tekstdata, dus het is vanzelfsprekend dat we kiezen voor een database engine die goed is met veel ongestructureerde data. 
+Twee voorbeelden hiervan zijn MongoDB en OpenSearch:
+
+\subsection{MongoDB}
+MongoDB is een open-source NoSQL (Not-only-SQL) documentgeörienteerde database engine die gedraaid kan worden op fully-managed cloud service of self-hosted. 
+MongoDB kan op heel veel verschillende besturingssystemen draaien (vooral GNU/Linux servers) en het hoofddoel van hun cloud services is MongoDB Atlas, dat wereldwijde, 
+ongezien snelle distributie en mobiliteit biedt over de bekendste cloudproviders, zoals Google Cloud, Amazon Web Services en Microsoft Azure. 
+
+De conclusie is dat MongoDB heel goed is voor heel veel ongestructureerde data en snelheid, maar als een zoekmachine zijn er betere alternatieven. 
+
+\subsection{OpenSearch}
+OpenSearch is ook een open-source NoSQL database engine die gefocust is op het zoeken van data. 
+Deze is geforked(gebouwd bovenop een open-source repository) op Elasticsearch en gebaseerd op Apache Lucene(Open-source zoeklibrary). 
+
+Het voordeel van OpenSearch is dat het native op Java draait. 
+Dit biedt mogelijkheden om ons innamesysteem van documenten (dat ook op Java zal draaien) makkelijk te integreren met ons databasesysteem. 
+Dit zijn bouwstenen naar een microservice-gebaseerd systeem dat (elke service geïsoleerd) samen opgezet kan worden. 
+
+Dit in combinatie met het gegeven dat OpenSearch gefocust is op het zoeken van data, laat de beslissing naar deze kant leunen als uitverkoren databasesysteem. 
+
+
+
