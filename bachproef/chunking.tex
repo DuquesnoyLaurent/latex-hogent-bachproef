@@ -27,4 +27,8 @@ Een citaat van rockset.com verduidelijkt dit principe:
 	\autocite{Rockset}
 \end{displayquote}
 
-Nu de data verdeeld is in chunks, kunnen we verdergaan naar de volgende stap, het integreren van Ollama met onze database.
+Nu de data verdeeld is in chunks, gebruiken we een embeddings model om van iedere chunk een vectorrepresentatie te maken en deze slaan we op in een vector store. 
+
+Dergelijke embeddings modellen kunnen gevonden worden op HuggingFace. Vanaf hier kunnen we libraries zoals LangChain om alles te wrappen. 
+
+Nu kunnen we verdergaan naar de volgende stap, het integreren van Ollama met onze database.
