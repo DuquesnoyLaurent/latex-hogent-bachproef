@@ -1,0 +1,30 @@
+\chapter{Testing}
+
+Testing van onze RAG chat tool is een proces dat oppervlakkig verdeeld kan worden in drie hoofdstukken. 
+
+\section{Testen van het systeem}
+Een eerste stap is \textbf{functioneel testen}, dit is de meest basic vorm van testen en kijkt of alle functies van het systeem al dan niet werken. 
+Denk maar aan gebruikersinput, query output, of het retrievalsysteem wel relevante chunks ophaalt, ...
+Daarna komt \textbf{performance testing}. Dit evalueert of het systeem onder verschillende loads naar behoren presteert. 
+Dit type testen wordt gebruikt om mogelijke bottlenecks te elimineren en een performant systeem te bekomen. 
+Als laatst hebben we \textbf{user experience testing}. Hier verwerken we feedback van de gebruikers over de bruikbaarheid van het systeem. 
+Dit houdt zaken in zoals lay-out, snelheid, gebruikersvriendelijkheid, ... 
+
+\section{Optimalisatie van het systeem}
+Dit hoofdstuk kan eigenlijk oneindig lang herhaald worden. 
+Er zijn altijd dingen die betere kunnen en we kunnen ze identificeren door volgende technieken toe te passen:
+
+\begin{itemize}
+	\item \textbf{Iteratieve optimalisatie:} Het constant verwerken van de feedback van advocaten en observeren van de evolutie van data kan de antwoorden van onze assistent accurater en behulpzamer maken. 
+	\item \textbf{Veranderen van het model:} Als je een beetje de actualiteit rond LLMs volgt, kan het zijn dat er plots eentje op de proppen komt die llama3 zal outperformen. 
+		Het is aangeraden om hierover up-to-date te blijven. 
+	\item \textbf{Robuustheid:} Observeren van logbestanden van Langchain kan ons naar memory leaks, fouten in chunking of embeddings en andere leiden. 
+		Robuustheid kan ook verbeterd worden door geoptimaliseerde foutbehandeling. 
+\end{itemize}
+
+Deze lijst kan ook toegepast worden als we willen schalen naar grotere datasets/ een groter aantal gebruikers. 
+
+\section{Monitoring en feedback}
+Zoals in het vorige hoofdstuk al aangewezen, is het van elementair belang dat we het systeem constant in de gaten houden. 
+Dit kan door rechtstreeks logs uit te lezen, of deze te sturen naar een logging- en visualisatieframework zoals Grafana.
+Data is alles en op basis van die data kunnen we blijven optimaliseren en verbeteren. 

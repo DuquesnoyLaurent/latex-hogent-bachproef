@@ -1,0 +1,14 @@
+\chapter{Opzetten van lokale omgeving en componenten verbinden}
+Nu het tijd is om alles samen te brengen, volgen we de volgende stappen om alles lokaal te draaien:
+
+\section{Frontend voorbereiden}
+Onze Next.js frontend stellen we in om HTTP requests en responses te faciliteren van en naar ons Langchain systeem. 
+Dit zal vrij eenvoudig verlopen omdat veel implementatie al voor ons gedaan is in het template project. 
+
+\section{RAG systeem voorbereiden}
+Langchain is een framework dat naast het controleren van onze modellen en vector stores ook een REST API host, die gecalled kan worden door onze chat-frontend. 
+Op deze manier houden we onze frontend en backend gescheiden van elkaar en verbinden we ze enkel over HTTP netwerkverkeer. 
+We kunnen dus op de machine van iedere advocaat een frontend installeren die veilig communiceert met één interne backend. 
+
+Nu deze twee met elkaar kunnen communiceren, zal het systeem intensief getest moeten worden op zwaar verkeer, incorrecte input, foute antwoorden van ons LLM, enz. 
+
