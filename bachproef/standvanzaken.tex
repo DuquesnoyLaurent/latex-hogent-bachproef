@@ -131,31 +131,26 @@ RAG is een \Gls{framework} dat drie zaken combineert vooraleer het een antwoord 
 	      Het concept is om het model zo te trainen dat het tekst produceert zoals de auteur van elk stuk data in de set.
 	\item \textbf{Een vector database met documenten}:
 	      Een vectordatabase is een soort databank die, samen met de data die normaal in een database zit, vectoren opslaat.
-		  Vectoren zijn een wiskundige representatie van data (dit kan alles zijn, van tekst tot volledige documenten, audio, video,...) in een multidimensionele ruimte. 
-		  In deze ruimte komt iedere dimensie overeen met een \Gls{feature} en deze vectoren worden berekend met \Gls{Machine Learning} technieken, zoals \Gls{Feature extraction} algoritmes. 
-		  De bedoeling van deze vectoren is om ze te kunnen opslaan op een manier dat degene die lijken op elkaar het dichtst bij elkaar zitten, zodat met algoritmes kan gezocht worden naar de dichtste overeenkomst(en). 
-	\item \textbf{De input van de gebruiker(query)}: De vraag van de gebruiker waar het model een antwoord dient op te genereren. 
+	      Vectoren zijn een wiskundige representatie van data (dit kan alles zijn, van tekst tot volledige documenten, audio, video,...) in een multidimensionele ruimte.
+	      In deze ruimte komt iedere dimensie overeen met een \Gls{feature} en deze vectoren worden berekend met \Gls{Machine Learning} technieken, zoals \Gls{Feature extraction} algoritmes.
+	      De bedoeling van deze vectoren is om ze te kunnen opslaan op een manier dat degene die lijken op elkaar het dichtst bij elkaar zitten, zodat met algoritmes kan gezocht worden naar de dichtste overeenkomst(en).
+	\item \textbf{De input van de gebruiker(query)}: De vraag van de gebruiker waar het model een antwoord dient op te genereren.
 \end{itemize}
 \newpage
 
-Zodoende kan een model gegronde antwoorden geven, gebaseerd op betrouwbare en relevante informatie.
+Een standaard Large Language Model zal wel juiste zinnen genereren, maar deze zullen niets te maken hebben met onze documentdatabase, omdat deze simpelweg niet zou geïntegreerd worden met het antwoord dat gegeven wordt.
+RAG zorgt er enerzijds voor dat belangrijke, relevante informatie op basis van de documenten gegeven wordt, maar het kan ook de schrijfstijl van de communicatie imiteren om er zo voor te zorgen dat het lijkt dat een stuk tekst
+geschreven werd door een advocaat zelf. \\
 
-Een quote van Medium legt uit hoe RAG werkt in grote lijnen:
+Hieronder een grafische voorstelling die schetst hoe data vloeit in een RAG-structuur:
+\begin{figure}[h]
+	\includegraphics[width=\textwidth]{RAG.png}
+	\centering
+\end{figure}
+\autocite{MediumRAG}
 
-\begin{displayquote}
-	\textit{"A typical RAG process, as pictured below, has an LLM, a collection of enterprise documents, and supporting infrastructure to improve information retrieval and answer construction.
-		The RAG pipeline looks at the database for concepts and data that seem similar to the question being asked, extracts the data from a vector database and reformulates the data into
-		an answer that is tailored to the question asked. This makes RAG a powerful tool for companies looking to harness their existing data repositories for enhanced decision-making
-		and information access."} \autocite{MediumRAG}
-	\begin{figure}[h]
-		\includegraphics[width=\textwidth]{RAG.png}
-		\centering
-	\end{figure}
-\end{displayquote}
-\newpage
-
-RAG kan hier dienst doen als een mogelijke plaatsvervanger voor manuele research en het opstellen van communicatiedocumenten (zoals aangetekende brieven, invorderingen, ...). Deze optie zal in
-een later stadium van deze bachelorproef geëvealueerd worden. Advocatuur is een heel toepasselijk gebied voor RAG:
+RAG kan hier dienst doen als backendsysteem in een chatbot-toepassing om te gaan assisteren bij onderzoek en het opstellen van communicatiedocumenten (zoals aangetekende brieven, invorderingen, ...). 
+Deze optie zal in een later stadium van deze bachelorproef geëvealueerd worden. Advocatuur is een heel toepasselijk gebied voor RAG:
 
 \begin{displayquote}
 	\textit{"Practically, RAG is likely preferable in environments like
@@ -163,6 +158,7 @@ een later stadium van deze bachelorproef geëvealueerd worden. Advocatuur is een
 		dynamically pull vast amounts of up-to-date data enables the most accurate and comprehensive responses."} \autocite{MediumRAG}
 \end{displayquote}
 
+\newpage
 \section{Het automatiseren van administratieve taken}
 \subsection{Probleemstelling}
 Het manueel en persoonlijk afhandelen van 'simpele' administratieve taken door een advocaat zelf kan heel veel tijdverlies veroorzaken.
