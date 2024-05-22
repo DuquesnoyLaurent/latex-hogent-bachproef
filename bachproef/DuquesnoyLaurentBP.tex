@@ -54,11 +54,11 @@
 \hypersetup{pageanchor=false} %% Disable page numbering references
 %% Render a Dutch outer title page if the main language is English
 \IfLanguageName{english}{%
-    %% If necessary, information can be changed here
-    \degreesought{Professionele Bachelor toegepaste informatica}%
-    \begin{otherlanguage}{dutch}%
-       \maketitle%
-    \end{otherlanguage}%
+	%% If necessary, information can be changed here
+	\degreesought{Professionele Bachelor toegepaste informatica}%
+	\begin{otherlanguage}{dutch}%
+		\maketitle%
+	\end{otherlanguage}%
 }{}
 
 %% Generates title page content
@@ -90,8 +90,29 @@
 }
 \newglossaryentry{CRM}{
 	name=CRM,
-	description={Customer Relationship Management: Een systeem om alle interacties met bestaande en toekomstige klanten te beheren.}
+	description={Customer Relationship Management: Een systeem om alle interacties met bestaande en toekomstige klanten te beheren}
 }
+\newglossaryentry{NLP}{
+	name=NLP,
+	description={Natural Language Processing: Het begrijpen en verwerken van natuurlijke taal door een computer}
+}
+\newglossaryentry{framework}{
+	name=Framework,
+	description={een structuur die dienst doet als een soort skelet, gemaakt om iets te bevatten of ondersteunen. Denk aan een stelling rond een bouwwerf}
+}
+\newglossaryentry{feature}{
+	name=Feature,
+	description={Een individueel, meetbaar kenmerk van data. Er zijn twee veelgebruikte soorten: categoriegebaseerd(geslacht, kleur, postcode) en numeriek(leeftijd, gewicht, inkomen)}
+}
+\newglossaryentry{Feature extraction}{
+	name={Feature Extraction},
+	description={Een voorbarige stap in machine learning die ruwe data transformeert in een effectievere set van features.}
+}
+\newglossaryentry{Machine Learning}{
+	name={Machine Learning},
+	description={De wetenschap die algoritmes bestudeert en ontwikkelt die kunnen leren van data en op basis van die data taken kunnen uitvoeren zonder expliciete instructies. Denk maar aan stemherkenning.}
+}
+
 
 \printglossary[title=Lijst van figuren]
 
