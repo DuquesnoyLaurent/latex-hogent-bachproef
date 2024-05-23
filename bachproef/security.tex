@@ -1,2 +1,19 @@
 \chapter{Haalbaarheid en dataveiligheid}
 \label{ch:feasability}
+Hoe haalbaar is een dergelijke chatbotimplementatie? 
+Tot hoeverre kan een chat app geïmplementeerd worden totdat er kostbare cliëntinformatie op het spel komt te staan? 
+Omdat deze bachelorproef geschreven is door een student met vrijwel nul ervaring in dataveiligheid kan er op geen enkele manier geëxperimenteerd worden met confidentiële clientdata. \\ 
+
+Daarom blijft dit onderzoek hypothetisch en overlopen we de elementaire stappen in het bouwen van een implementatie die een advocaat zal toestaan om bepaalde repetitieve taken, 
+zoals opzoeken van data in een gesloten databank en opstellen van teksten, te gaan automatiseren en zodoende te versnellen in uitvoering om tijd uit te sparen voor belangrijk opzoekingswerk, 
+rechtbankwerk, cliëntconsultaties e.d.\\ 
+
+Een van de vooraanstaande redenen dat er geen reële implementatie komt is omdat Large Language RAG-modellen heel zwaar zijn voor een computer om uit te voeren. 
+Er zou bij een computer al een heel zware grafische kaart moeten aanwezig zijn om verschillende connecties van advocaten tegelijkertijd te kunnen valideren. 
+Als men dit in een cloudgebaseerde applicatie zou draaien, zou dit een mogelijk risico kunnen vormen om een clouddienst toegang te geven tot cliëntdata.
+Ook kan iemand met slechte intenties netwerkverkeer onderscheppen en zodoende (confidentiële) data bemachtigen. \\ 
+
+Een lokale oplossing is hier dus essentieel. 
+Om een lokale oplossing te draaien is het best om een heel sterke grafische kaart te installeren in de servercomputer. 
+Prijzen van (capabele) NVIDIA GPU's (GeForce RTX 3080 ≤) starten in België (tijdens het schrijven van deze paper) rond de 550 EUR. 
+Het zou dus een preliminaire investering vereisen van een kantoor om absolute dataveiligheid te garanderen. 
