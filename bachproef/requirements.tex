@@ -1,0 +1,33 @@
+\chapter{Requirements-analyse}
+Een van de eerste zaken die moeten gebeuren in het begin van een onderzoek is een analyse van wat er allemaal moet gebeuren. 
+Deze analyse is heel belangrijk om het onderzoeksgebied af te bakenen en een gerichte literatuurstudie op te stellen. \\ 
+
+Er is voor het checken van de requirements bij Deltalex een audit uitgevoerd, waarbij er over de schouder van een advocaat is meegekeken en hier werden de volgende bottlenecks vastgesteld:
+\begin{itemize}
+	\item \textbf{Het zoeken van cliëntdata in documentdata is een traag en repetitief proces}
+	\item \textbf{De templates voor documenten zijn gedateerd en de ingebouwde teksten vereisen veel copy-pastewerk}
+	\item \textbf{Het opzoeken van een ondernemingsnummer in een online databank van ondernemingen is een makkelijk te automatiseren proces}
+	\item \textbf{Het maken van een nieuw dossier (waarbij bijvoorbeeld een klant een ondernemer niet betaalt) is een vrij generiek, trainbaar proces}
+\end{itemize}
+
+Het maken en bewerken van dossiers gebeurt via een programma dat heel nauw aansluit op de Microsoft \Gls{technologiestack}. 
+Het zal dus niet echt efficiënt zijn om hier zelf aan te sleutelen om inputs te gaan stroomlijnen, 
+omdat het dan kan zijn dat het bedrijf dat de software vestrekt zal weigeren om nog ondersteuning aan te bieden bij mogelijke problemen. 
+
+\textbf{Wat kan dan wel gestroomlijnd worden?}
+Het opzoeken van cliëntdata is een mogelijkheid. 
+Het opstellen van documenten en teksten gebaseerd op een documentdatabase ook. 
+Deze processen kunnen samengebracht worden in een soort digitale assistent. 
+Deze assistent kan gebruikt worden door advocaten via een soort webinterface (zoals chatGPT van OpenAI) waar ze vragen kunnen stellen in hun eigen woorden 
+waar ze vervolgens antwoorden zullen krijgen die via een Large Language Model zullen gegenereerd worden. 
+De antwoorden staan los van het programma dat ze gebruiken en zal zo niet interfereren met de werking ervan. 
+Hiermee vermijden we een mogelijke weigering van ondersteuningsdienst. \\ 
+
+Het online opzoeken van data in een ondernemingsdatabank is misschien wel een repetitief proces, maar het zal niet veel simpeler kunnen gemaakt worden voor een advocaat dan 
+het invoeren van zoektermen in een formulier en op basis daarvan resultaten terugkrijgen en ze kopiëren in hun communicatie. 
+Mogelijke oplossingen hier zijn het instellen van shortcuts en het gebruiken van sneltoetsen om sneller de interface van de browser te kunnen manipuleren. 
+Dergelijke dingen kunnen bereikt worden met extensies die, als er iets met de muis gedaan wordt, een melding geven met de sneltoets die gebruikt kan worden om het commando uit te voeren. \\ 
+
+De onderzoeksfocus van deze bachelorproef zal zich dus toespitsen op de verschillende stappen die nodig zijn om een chatbot te bouwen die aan de ene kant makkelijk bruikbaar is voor iedere advocaat
+en aan de andere kant relevante, juiste en documentgebaseerde antwoorden op een snelle manier zal verschaffen. 
+In het hoofdstuk \ref{ch:feasability} wordt toegelicht hoever deze implementatie zal gaan. 
