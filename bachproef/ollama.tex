@@ -56,14 +56,14 @@ Er zijn heel veel papers geschreven over hun evolutie en werking, hieronder een 
 \begin{displayquote}
 	"Recently, significant breakthroughs have been witnessed in language models, primarily attributed to transformers, increased computational capabilities, and the availability of large-scale training data.
 	These developments have brought about a revolutionary transformation by enabling the creation of LLMs that can approximate human-level performance on various tasks.
-	Large Language Models (LLMs) have emerged as cutting-edge artificial intelligence systems that can process and generate text with coherent communication, and generalize to multiple tasks."
+	Large Language Models (LLMs) have emerged as cutting-edge artificial intelligence systems that can process and generate text with coherent communication, and generalize to multiple tasks."\autocite{ACOoLLM}
 	\begin{figure}[h]
 		\makebox[\textwidth]{
 			\includegraphics[width=\textwidth]{LLMs_Overview.png}
 		}
+		\captionof{figure}{Schematisch overzicht van Large Language Models. \autocite{ACOoLLM} }
 		\centering
 	\end{figure}
-	\autocite{ACOoLLM}
 
 
 \end{displayquote}
@@ -101,14 +101,13 @@ Een artikel van Jacob Lee op de blog van ollama.com wijst ons de weg op een stra
 
 	There’s an additional step required for followup questions, which may contain pronouns or other references to prior chat history.
 	Because vectorstores perform retrieval by semantic similarity, these references can throw off retrieval.
-	Therefore, we add an additional dereferencing step that rephrases the initial step into a “standalone” question before using that question to search our vectorstore. 
-
+	Therefore, we add an additional dereferencing step that rephrases the initial step into a “standalone” question before using that question to search our vectorstore. \autocite{Ollama}
 	\begin{figure}[h]
 		\makebox[\textwidth] {
 			\includegraphics[width=\textwidth]{llm_pipeline.png}
 		}
+		\captionof{figure}{Schematische voorstelling van een conversatie met een LLM chatbot \autocite{Ollama} }
 	\end{figure}
-	\autocite{Ollama}
 \end{displayquote}
 
 Bovenstaande pipeline is een heel goeie richtlijn om onze implementatie op te baseren. Nu hebben we een interface nodig om queries in op te stellen als gebruiker en de outputs te kunnen lezen in een chat-achtige interface. 
