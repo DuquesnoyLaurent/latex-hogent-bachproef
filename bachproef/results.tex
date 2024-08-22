@@ -1,5 +1,96 @@
 \chapter{Resultaten en reflectie}
 \label{ch:results_reflection}
+\section{Behaalde resultaten}
+In dit hoofdstuk volgt een objectieve beoordeling op de resultaten van dit onderzoek. \\ 
+
+Het resultaat van deze bachelorproef zijn een paar zaken:
+
+\begin{enumerate}
+	\item Een literatuuronderzoek naar de huidige stand van zaken en een grondige beschrijving van het probleem 
+	\item Methodologie: Een opsomming van en onderzoek naar technologieën die enerzijds samen passen en anderzijds een positieve invloed hebben op ons probleem
+	\item Een proof-of-concept van een digitale assistent
+	\item De beoordeling van een advocaat van Deltalex en zodoende feedback over de impact op zijn workflow
+\end{enumerate}
+
+\subsection{Literatuurstudie}
+De literatuurstudie is goed verlopen en de documenten gevonden zijn relevant en up-to-date. 
+De onderzoeksvraag is in subvragen verdeeld en individueel onderzocht en er is onderzoek gedaan naar mogelijke oplossingen voor ieder probleem. 
+
+\subsection{Methodologie}
+De technologieën gevonden zijn open-source, up-to-date en lokaal inzetbaar. 
+Dit maakt ze ideaal voor de implementie van een proof-of-concept dat 100\% lokaal kan draaien. 
+Iedere technologie is besproken maar relatief oppervlakkig onderzocht. 
+Langdurig gebruik van de applicatie zal hun waarde uitwijzen. 
+
+\subsection{Proof-of-concept}
+Het geleverde proof of concept is een fork van een veelgebruikt chatplatform gebouwd in het LangChain framework. 
+Dat maakt het een geteste oplossing die performant is out-of-the box als je in de cloud deployed. 
+De aanpassing van de app gebeurde met trial and error maar is uiteindelijk in orde gekomen. 
+Het embedding model heeft krachtig en snel zijn werk gedaan. 
+Het large-language model heeft soms wat moeite met spelling en kan soms wel eens hallucineren (foute informatie verzinnen),
+maar de gegenereerde resultaten dienen louter ter inspiratie voor een advocaat om zijn werk op te baseren. 
+
+\section{Beoordeling van een advocaat uit Deltalex}
+
+
+\subsection{Voorbeeldprompt en persoonlijke beoordeling}
+\begin{lstlisting}
+PROMPT: schrijf een ingebrekestelling voor 5000 euro aan aqualex
+ANSWER:
+
+	Ingebekeringverzoek
+
+	Wij, [Naam en adres van de gemaakte bekering], vroegtelijk aangeduid als De Vermogende Party, op grond van artikel 475 ter, derde lid van het Gerechtelijk Wetboek, 
+	hierbij verzoeken aan u, eerder bevoegd gezien bij de familie- rechtbank, een ingebrekestelling te doen van € 5.000,00 aan onze klantenrekening bij uw instelling, 
+	onder nummer [Klantnummer], met vermelding dat deze ingebrekestelling gedaan wordt ter behandeling van de nalatenschap van onze overleden klant en volgens ons 
+	kennisgevingen bedraagt het netto actief van de nalatenschap niet meer dan € 5.000,00.
+
+	Bij aanvaarding van deze ingebrekestelling, zullen wij onze schulden tegenover uw instelling vervullen en gelijktijdig aan u het geld overmaken dat wordt gevorderd door de ingebrekestelling.
+
+	Als de verwerper of verwerpers van de nalatenschap op eer verklaren dat volgens hun kennis het netto actief van de nalatenschap niet meer 
+	bedraagt dan € 5.000,00, wordt deze ingebrekestelling uitgeoefend en vervult onze schulden aan uw instelling. 
+	In geval dit geen geval is, zal ons verzoekschrift worden overweegd op de wijze omschreven in artikel 1231-4, tweede lid van het Gerechtelijk Wetboek.
+
+	Wij danken u voor uw ondersteuning en verwachten u binnen een week te horen over de uitvoering van deze verzoekschrift.
+
+	Voorzichtig en met zorg,
+	[Naam en adres van de gemaakte bekering]
+\end{lstlisting}
+
+Minpunten:
+\begin {itemize}
+	\item Veel spelfouten
+	\item Waarschijnlijk totaal verkeerde verwijzingen naar wetsartikels
+	\item Relatief kort voor dergelijk document
+\end{itemize}
+
+Pluspunten:
+\begin{itemize}
+	\item Professionele schrijfstijl
+	\item Parameters worden schijnbaar niet in de wind geslagen en correct gebruikt
+\end{itemize}
+
+
+Citatie: TODO nog te ontvangen 
+
+%% \begin{lstlisting}
+%% 	Beste Laurent,
+%% 
+%% 	Ik heb jouw toepassing op jouw computer lokaal een paar keer getest en had je beloofd eerstdaags schriftelijk mijn bedenkingen te bezorgen, dus bij deze. 
+%% 
+%% 	Pluspunten:
+%% 	- Allereerst: mooie realisatie! De website ziet er mooi uit en is zoals je zei heel makkelijk in gebruik. Kudo's!
+%% 	- 
+%% 
+%% 
+%% 	Minpunten:
+%% 	- Spelling: de spelling van de chatbot is soms volledig fout. Ik weet niet hoe dit komt maar ik zou dat toch eens bekijken. 
+%% 	- 
+%% 
+%% \end{lstlisting}
+
+
+\section{Reflectie}
 Een reflectie verloopt heel goed aan de hand van auto-evaluatie d.m.v. vragen die men aan zichzelf stelt. 
 Hieronder volgen een paar vragen die kunnen ontspringen wanneer men denkt aan automatisatie van workflows en repetitieve taken.\\ 
 
