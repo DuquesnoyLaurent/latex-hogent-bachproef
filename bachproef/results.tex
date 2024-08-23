@@ -18,19 +18,19 @@ De onderzoeksvraag is in subvragen verdeeld en individueel onderzocht en er is o
 
 \subsection{Methodologie}
 De technologieën gevonden zijn open-source, up-to-date en lokaal inzetbaar.
-Dit maakt ze ideaal voor de implementie van een proof-of-concept dat 100\% lokaal kan draaien.
+Dit maakt ze ideaal voor de implementatie van een proof-of-concept dat 100\% lokaal kan draaien.
 Iedere technologie is besproken maar relatief oppervlakkig onderzocht.
 Langdurig gebruik van de applicatie zal hun waarde uitwijzen.
 
 \subsection{Proof-of-concept}
-Het geleverde proof of concept is een fork van een veelgebruikt chatplatform gebouwd in het LangChain framework.
+Het geleverde proof of concept is een fork van een veelgebruikt chatplatform, gebouwd m.b.v. het LangChain framework.
 Dat maakt het een geteste oplossing die performant is out-of-the box als je in de cloud deployt.
 De aanpassing van de app gebeurde met trial and error maar is uiteindelijk in orde gekomen.
 Het embedding model heeft krachtig en snel zijn werk gedaan.
 Het large-language model heeft soms wat moeite met spelling en kan soms wel eens hallucineren (foute informatie verzinnen),
 maar de gegenereerde resultaten dienen louter ter inspiratie voor een advocaat om zijn werk op te baseren.
 
-\section{Beoordeling van een advocaat uit Deltalex}
+\section{Beoordeling proof-of-concept}
 
 
 \subsection{Voorbeeldprompt en persoonlijke beoordeling}
@@ -56,7 +56,7 @@ ANSWER:
 	Voorzichtig en met zorg,
 	[Naam en adres van de gemaakte bekering]
 \end{lstlisting}
-
+\newpage
 Minpunten:
 \begin {itemize}
 \item Veel spelfouten
@@ -70,30 +70,16 @@ Pluspunten:
 	\item Parameters worden schijnbaar niet in de wind geslagen en correct gebruikt
 \end{itemize}
 
+\subsection{Beoordeling van een advocaat van Deltalex}
+Volgende pagina geeft een screenshot weer van de beoordeling. 
+\begin{figure}
+	\makebox{
+		\includegraphics{feedback.png}
+	}
+	\captionof{figure}{Een screenshot van een brief gestuurd ter evaluatie van Deltalex Chat}
+\end{figure}
 
-Citatie: TODO nog te ontvangen
-
-\begin{lstlisting}
-	Beste Laurent, ik schrijf u hierop betreffende jouw chatbot. 
-
-	Ik heb jouw computer eens meegenomen naar kantoor, de toepassing een paar keer getest en had je beloofd eerstdaags schriftelijk mijn bedenkingen te bezorgen, dus bij deze. 
-	
-	De site is overzichtelijk en gebruiksvriendelijk. De chatbot is makkelijk in gebruik en maakt vrij snel een stuk tekst voor wat ik maar wil. 	
-
-	Ik heb wel een paar bemerkingen. De bot kan wel incorrecte informatie genereren en ook spelfouten komen soms voor de dag. 
-
-	In een geavanceerd stadium van ontwikkeling zou het ideaal zijn om deze fouten te corrigeren. 
-	We zien wel hoe we hier verder mee gaan. 
-
-	Uiteindelijk kan men zeggen dat het een interessant hulpmiddel kan zijn voor inspiratie en repetitieve taken zoals het starten van brieven. 
-
-	Alvast bedankt om dit voor ons te realiseren!
-
-	Tot snel, 
-	Nicolas
-\end{lstlisting}
-
-
+\newpage
 \section{Reflectie}
 Een reflectie verloopt heel goed aan de hand van auto-evaluatie d.m.v. vragen die men aan zichzelf stelt.
 Hieronder volgen een paar vragen die kunnen ontspringen wanneer men denkt aan automatisatie van workflows en repetitieve taken.\\
@@ -129,3 +115,11 @@ De voordelen van chatbots zijn de snelheid van antwoorden, de bijna menselijke m
 Chatbots zoals ChatGPT zijn de laatste jaren aan een gigantische opmars bezig en hun functionaliteiten worden alleen maar beter dankzij de gigantisch hoge graad van evolutie in de technologische sector.
 Nadelen van chatbots kunnen dingen zijn zoals hallucinatie(generatie van incorrecte antwoorden), grammaticale repetitie, ...
 Het is altijd aangeraden om hun output te valideren i.p.v. er blind op te vertrouwen.
+
+\section{Verbeteringen en aanpassingen EP3}
+\begin{itemize}
+	\item Bijna volledige rewrite van corpustekst(buiten literatuurstudie en reflectie)
+	\item Proof-of-concept toegevoegd
+	\item Dankzij POC feedback van een advocaat ontvangen en toegevoegd
+	\item Veel gerichtere technologiekeuze, geavanceerder dan eerste iteratie bachelorproef waar onderzoek puur hypothetisch was
+\end{itemize}
